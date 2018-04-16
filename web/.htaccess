@@ -1,0 +1,49 @@
+Options -Indexes
+
+RewriteEngine on
+
+# ErrorDocument 404 /error.php
+
+RewriteRule ^$ app/controller/siteController.php?action=home [QSA,L]
+
+# Explore
+RewriteRule ^getRandom/process/?$ app/controller/siteController.php?action=randomPerson [QSA,L]
+
+# RewriteRule ^altHome/?$ app/controller/siteController.php?action=altHome [QSA,L]
+
+RewriteRule ^logout/?$ app/controller/siteController.php?action=logout [QSA,L]
+RewriteRule ^login/?$ app/controller/siteController.php?action=login [QSA,L]
+RewriteRule ^login/process/?$ app/controller/siteController.php?action=loginProcess [QSA,L]
+RewriteRule ^signup/?$ app/controller/siteController.php?action=signup [QSA,L]
+RewriteRule ^signup/process/?$ app/controller/siteController.php?action=signupProcess [QSA,L]
+RewriteRule ^help/?$ app/controller/siteController.php?action=help [QSA,L]
+
+# Profile
+RewriteRule ^user/view/([a-zA-Z0-9]+)/?$ app/controller/userController.php?action=view&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/addfollowerprocess/([a-zA-Z0-9]+)/?$ app/controller/userController.php?action=addfollow&username=$1&follower=$2 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/deletefollowerprocess/([a-zA-Z0-9]+)/?$ app/controller/userController.php?action=deletefollowerprocess&follower=$1&followee=$2 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/?$ app/controller/userController.php?action=edit&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/fnameprocess/?$ app/controller/userController.php?action=editFirstName&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/lnameprocess/?$ app/controller/userController.php?action=editLastName&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/bdayprocess/?$ app/controller/userController.php?action=editBirthday&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/emailprocess/?$ app/controller/userController.php?action=editEmail&username=$1 [QSA,L]
+RewriteRule ^user/view/([a-zA-Z0-9]+)/edit/pwdprocess/?$ app/controller/userController.php?action=editPassword&username=$1 [QSA,L]
+
+
+#person
+RewriteRule ^person/add/?$ app/controller/siteController.php?action=createMember [QSA,L]
+RewriteRule ^person/view/(\d+)/delete/process/(\s+)?$ app/controller/personController.php?action=deleteItem&id=$1&desc=$2 [QSA,L]
+
+# Stories page
+RewriteRule ^stories/?$ app/controller/storyController.php?action=viewStories [QSA,L]
+RewriteRule ^stories/add/?$ app/controller/storyController.php?action=addStory [QSA,L]
+RewriteRule ^stories/add/process/?$ app/controller/storyController.php?action=addStoryProcess [QSA,L]
+RewriteRule ^stories/delete/process/(\d+)/?$ app/controller/storyController.php?action=deleteStoryProcess&id=$1 [QSA,L]
+
+# Story page
+RewriteRule ^stories/view/(\d+)/?$ app/controller/storyController.php?action=viewStory&id=$1 [QSA,L]
+RewriteRule ^stories/view/(\d+)/edit/process/?$ app/controller/storyController.php?action=editStoryProcess&id=$1 [QSA,L]
+
+# Comments
+RewriteRule ^stories/view/(\d+)/comment/add/process/?$ app/controller/commentController.php?action=addCommentProcess&story_id=$1 [QSA,L]
+RewriteRule ^stories/view/(\d+)/comment/delete/process/?$ app/controller/commentController.php?action=deleteCommentProcess&story_id=$1 [QSA,L]
