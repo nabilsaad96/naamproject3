@@ -68,9 +68,7 @@ class SiteController {
 				$this->showHLB();
 				break;
 
-			case 'showDatabase'
-				$this->showDatabase();
-				break;
+				
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -215,7 +213,7 @@ class SiteController {
 	public function showDatabase() {
 		$pageTitle = 'Database Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Database::loadAll();
+		$rl = PhysicalServer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
