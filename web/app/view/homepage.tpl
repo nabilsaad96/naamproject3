@@ -8,6 +8,12 @@
     </div>
   </section>
 
+  <h2>Relations</h2>
+
   <button type="button" href="<?= BASE_URL ?>/help/" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" href="<?= BASE_URL ?>/help/" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" href="<?= BASE_URL ?>/help/" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" href="<?= BASE_URL ?>/help/" class="btn btn-primary btn-lg">Large</button>
+
 
 </main>
