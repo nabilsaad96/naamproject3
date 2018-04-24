@@ -73,11 +73,11 @@ class SiteController {
 		$events = Event::getEvents();
 
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		if(isset($_SESSION['username'])):
-			include_once SYSTEM_PATH.'/view/dashboard.tpl';
-		else:
+	//	if(isset($_SESSION['username'])):
+	//		include_once SYSTEM_PATH.'/view/dashboard.tpl';
+//	else:
 			include_once SYSTEM_PATH.'/view/homepage.tpl';
-		endif;
+	//	endif;
 
 		include_once SYSTEM_PATH.'/view/footer.tpl';
   }
