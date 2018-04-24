@@ -31,10 +31,10 @@ class PhysicalServer {
 
       // Store db results in into a Comment object
       $cm->name             = $row['Sname'];
+      echo($row['Sname']);
       $cm->SAN              = $row['SAN'];
       $cm->admin            = $row['admin'];
       $cm->$backupAdmin     = $row['backupAdmin'];
-      echo($row);
 
       // Return the comment
       return $cm;
