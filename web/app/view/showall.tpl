@@ -1,3 +1,4 @@
+<a href="<?= BASE_URL ?>">Go Back</a>
 <div class="row justify-content-md-center">
   <div class="col-6">
     <h1 class="text-center">Output</h1><br/><br/>
