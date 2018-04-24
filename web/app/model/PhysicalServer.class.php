@@ -15,7 +15,7 @@ class PhysicalServer {
       // Connect to database
       $db = Db::instance();
       // Database query
-      $q = sprintf("SELECT * FROM `%s` WHERE id = %d;", self::DB_TABLE, $id);
+      $q = sprintf("SELECT * FROM `%s` WHERE name = %s;", self::DB_TABLE, $id);
       // Do the query
       $result = $db->query($q);
       // If nothing found
@@ -26,15 +26,13 @@ class PhysicalServer {
       // Get results as associative array
       $row = $result->fetch_assoc();
       // Instantiate new Life Event object
-      $cm = new Comment();
+      $cm = new PhysicalServer();
 
       // Store db results in into a Comment object
-      $cm->id           = $row['id'];
-      $cm->user_id      = $row['user_id'];
-      $cm->story_id     = $row['story_id'];
-      $cm->comment      = $row['comment'];
-      $cm->date_created = $row['date_created'];
-
+      $cm->name             = $row['name'];
+      $cm->SAN              = $row['SAN'];
+      $cm->admin            = $row['admin'];
+      $cm->$backupAdmin     = $row['backupAdmin'];
       // Return the comment
       return $cm;
   }
@@ -69,6 +67,31 @@ class PhysicalServer {
     //Return the comments
     return $comments;
   }
+
+  public static function loadAll() {
+    // Connect to database
+    $db = Db::instance();
+    // Database query
+    $q = sprintf("SELECT * FROM `%s`;",
+      self::DB_TABLE
+      );
+    // Do the query
+    $result = $db->query($q);
+    // If nothing found
+    if($result->num_rows == 0) {
+      return null;
+    }
+
+    $physicalservers = array();
+    //Turn the id's into full comments
+    while($row = $result->fetch_assoc()) {
+      $physicalservers[] = self::loadById($row['CommentID']);
+    }
+
+    //Return the comments
+    return $physicalservers;
+  }
+
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
