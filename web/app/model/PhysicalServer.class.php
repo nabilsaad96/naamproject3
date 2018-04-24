@@ -28,13 +28,14 @@ class PhysicalServer {
       $row = $result->fetch_assoc();
       // Instantiate new Life Event object
       $cm = new PhysicalServer();
-      echo($row);
 
       // Store db results in into a Comment object
       $cm->name             = $row['Sname'];
       $cm->SAN              = $row['SAN'];
       $cm->admin            = $row['admin'];
       $cm->$backupAdmin     = $row['backupAdmin'];
+      echo($row);
+
       // Return the comment
       return $cm;
   }
