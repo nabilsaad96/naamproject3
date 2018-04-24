@@ -215,7 +215,7 @@ class SiteController {
 	public function showDatabase() {
 		$pageTitle = 'Database Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		$rl = Database::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
