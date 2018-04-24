@@ -15,7 +15,7 @@ class PhysicalServer {
       // Connect to database
       $db = Db::instance();
       // Database query
-      $q = sprintf("SELECT * FROM `%s` WHERE name = %s;", self::DB_TABLE, $id);
+      $q = sprintf("SELECT * FROM `%s` WHERE Sname = %s;", self::DB_TABLE, $id);
       // Do the query
       $result = $db->query($q);
       // If nothing found
@@ -35,37 +35,6 @@ class PhysicalServer {
       $cm->$backupAdmin     = $row['backupAdmin'];
       // Return the comment
       return $cm;
-  }
-
-  // Return all comments attached to a story
-  public static function getByStoryId($story_id) {
-    // Connect to database
-    $db = Db::instance();
-    // Database query
-    $q = sprintf("SELECT cm.id AS CommentID FROM `%s` cm
-      INNER JOIN `%s` p ON
-      cm.story_id = p.id
-      WHERE cm.story_id = %d
-      ORDER BY cm.date_created DESC ",
-      self::DB_TABLE,
-      Story::DB_TABLE,
-      $story_id
-      );
-    // Do the query
-    $result = $db->query($q);
-    // If nothing found
-    if($result->num_rows == 0) {
-      return null;
-    }
-
-    $comments = array();
-    //Turn the id's into full comments
-    while($row = $result->fetch_assoc()) {
-      $comments[] = self::loadById($row['CommentID']);
-    }
-
-    //Return the comments
-    return $comments;
   }
 
   public static function loadAll() {
