@@ -1,29 +1,31 @@
 
-
-
-<table class="table table-striped">
+<table class="table table-striped table-dark">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>admin</th>
-      <th>backupAdmin</th>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>John</td>
-      <td>Doe</td>
-      <td>john@example.com</td>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
     </tr>
     <tr>
-      <td>Mary</td>
-      <td>Moe</td>
-      <td>mary@example.com</td>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
     </tr>
     <tr>
-      <td>July</td>
-      <td>Dooley</td>
-      <td>july@example.com</td>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
     </tr>
   </tbody>
 </table>
