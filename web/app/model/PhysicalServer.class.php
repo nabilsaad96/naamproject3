@@ -75,6 +75,7 @@ class PhysicalServer {
     $q = sprintf("SELECT * FROM `%s`;",
       self::DB_TABLE
       );
+      echo($q);
     // Do the query
     $result = $db->query($q);
     // If nothing found
