@@ -10,7 +10,7 @@
 
 
   <div class="row">
-    <div class="col-4">
+    <div class=".col-6 .col-md-4">
       <h2>Relations</h2>
       <div class="list-group">
         <a href="<?= BASE_URL ?>/physicalserverrelation/view/" class="list-group-item list-group-item-action">Physical Servers</a>
@@ -23,11 +23,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4">
+    <div class=".col-6 .col-md-4">
     </div>
   </div>
   <div class="row">
-    <div class="col-4">
+    <div class=".col-6 .col-md-4">
       <h2>Queries</h2>
       <div class="list-group">
         <a href="<?= BASE_URL ?>/physicalserverrelation/view/" class="list-group-item list-group-item-action">Physical Servers</a>
