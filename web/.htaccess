@@ -47,3 +47,6 @@ RewriteRule ^stories/view/(\d+)/edit/process/?$ app/controller/storyController.p
 # Comments
 RewriteRule ^stories/view/(\d+)/comment/add/process/?$ app/controller/commentController.php?action=addCommentProcess&story_id=$1 [QSA,L]
 RewriteRule ^stories/view/(\d+)/comment/delete/process/?$ app/controller/commentController.php?action=deleteCommentProcess&story_id=$1 [QSA,L]
+
+# Relations
+RewriteRule ^physicalserverrelation/view/?$ app/controller/siteController.php?action=showPhysicalServer [QSA,L]

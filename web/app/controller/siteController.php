@@ -56,6 +56,10 @@ class SiteController {
 				$this->help();
 				break;
 
+			case 'showPhysicalServer':
+				$this->showPhysicalServer();
+				break;
+
 			case 'signupProcess':
 				$username = $_POST['username'];
 				$password = $_POST['pw'];
@@ -68,6 +72,7 @@ class SiteController {
 		}
 
 	}
+
 	public function home() {
 		$pageTitle = 'Home';
 		$events = Event::getEvents();
@@ -158,6 +163,15 @@ class SiteController {
 		else { // There are not chaplains stored on the server
 			header('Location: '.BASE_URL); exit(); // send us to home page
 		} // End if.
+	}
+
+	public function showPhysicalServer() {
+		$pageTitle = 'Physical Server Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showPhysicalServer.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function login() {
