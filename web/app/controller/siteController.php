@@ -60,6 +60,10 @@ class SiteController {
 				$this->showPhysicalServer();
 				break;
 
+			case 'showVirtualServer':
+				$this->showPhysicalServer();
+				break;
+
 			case 'signupProcess':
 				$username = $_POST['username'];
 				$password = $_POST['pw'];
