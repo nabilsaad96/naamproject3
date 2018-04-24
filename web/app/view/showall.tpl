@@ -1,6 +1,6 @@
 <div class="row justify-content-md-center">
   <div class="col-6">
-    <h1>Output</h1><br/><br/>
+    <h1 class="text-center">Output</h1><br/><br/>
     <table class="table table-striped table-dark">
       <thead>
         <tr>
