@@ -15,7 +15,7 @@ class VirtualServer {
       // Connect to database
       $db = Db::instance();
       // Database query
-      $q = sprintf("SELECT * FROM `%s` WHERE Sname = '%s';", self::DB_TABLE, $id);
+      $q = sprintf("SELECT * FROM `%s` WHERE Xname = '%s';", self::DB_TABLE, $id);
       //echo($q);
       // Do the query
       $result = $db->query($q);
