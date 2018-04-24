@@ -61,7 +61,7 @@ class SiteController {
 				break;
 
 			case 'showVirtualServer':
-				$this->showPhysicalServer();
+				$this->showVirtualServer();
 				break;
 
 			case 'signupProcess':
