@@ -168,7 +168,7 @@ class SiteController {
 	public function showPhysicalServer() {
 		$pageTitle = 'Physical Server Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		//$rl = PhysicalServer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showPhysicalServers.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
