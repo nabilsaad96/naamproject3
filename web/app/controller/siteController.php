@@ -68,6 +68,9 @@ class SiteController {
 				$this->showHLB();
 				break;
 
+			case 'showDatabase'
+				$this->showDatabase();
+				break;
 
 			case 'signupProcess':
 				$username = $_POST['username'];
