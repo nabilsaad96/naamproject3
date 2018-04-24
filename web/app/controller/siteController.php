@@ -72,6 +72,11 @@ class SiteController {
 				$this->showDatabase();
 				break;
 
+			case 'showDS':
+				$this->showDS();
+				break;
+
+
 			case 'signupProcess':
 				$username = $_POST['username'];
 				$password = $_POST['pw'];
@@ -197,7 +202,7 @@ class SiteController {
 	public function showDS() {
 		$pageTitle = 'Docker Swarm Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		$rl = DockerSwarm::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
