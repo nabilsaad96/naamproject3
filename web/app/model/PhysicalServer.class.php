@@ -55,7 +55,9 @@ class PhysicalServer {
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
+      echo($row);
       $physicalservers[] = self::loadById($row['name']);
+
     }
 
     //Return the comments
