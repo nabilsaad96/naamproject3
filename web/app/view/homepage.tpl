@@ -21,8 +21,8 @@
         <a href="<?= BASE_URL ?>/applicationrelation/view/" class="list-group-item list-group-item-action">Applications</a>
       </div>
     </div>
-  </div>
-  <div class="row">
+    <div class="col-4">
+    </div>
     <div class="col-4">
       <h2>Queries</h2>
       <div class="list-group">
