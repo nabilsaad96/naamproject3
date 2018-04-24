@@ -50,3 +50,8 @@ RewriteRule ^stories/view/(\d+)/comment/delete/process/?$ app/controller/comment
 
 # Relations
 RewriteRule ^physicalserverrelation/view/?$ app/controller/siteController.php?action=showPhysicalServer [QSA,L]
+RewriteRule ^virtualserverrelation/view/?$ app/controller/siteController.php?action=showVirtualServer [QSA,L]
+RewriteRule ^dockerswarmrelation/view/?$ app/controller/siteController.php?action=showDS [QSA,L]
+RewriteRule ^hardwareloadbalancerrelation/view/?$ app/controller/siteController.php?action=showHLB [QSA,L]
+RewriteRule ^databaserelation/view/?$ app/controller/siteController.php?action=showDatabase [QSA,L]
+RewriteRule ^applicationrelation/view/?$ app/controller/siteController.php?action=showApp [QSA,L]

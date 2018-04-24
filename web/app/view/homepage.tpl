@@ -12,11 +12,11 @@
 
   <!--<button type="button" onclick="location.href = '<?= BASE_URL ?>/help/'" class="btn btn-primary btn-lg">Physical Servers</button><br/><br/>-->
   <a href="<?= BASE_URL ?>/physicalserverrelation/view/"><button type="button" class="btn btn-primary btn-lg">Physical Servers</button></a><br/><br/>
-  <a href="<?= BASE_URL ?>/help/"><button type="button" class="btn btn-primary btn-lg">Virtual Servers</button></a><br/><br/>
-  <a href="<?= BASE_URL ?>/help/"><button type="button" class="btn btn-primary btn-lg">Databases</button></a><br/><br/>
-  <a href="<?= BASE_URL ?>/help/"><button type="button" class="btn btn-primary btn-lg">Docker Swarms</button></a><br/><br/>
-  <a href="<?= BASE_URL ?>/help/"><button type="button" class="btn btn-primary btn-lg">Hardware Load Balancers</button></a><br/><br/>
-  <a href="<?= BASE_URL ?>/help/"><button type="button" class="btn btn-primary btn-lg">Applications</button></a><br/><br/>
+  <a href="<?= BASE_URL ?>/virtualserverrelation/view/"><button type="button" class="btn btn-primary btn-lg">Virtual Servers</button></a><br/><br/>
+  <a href="<?= BASE_URL ?>/databaserelation/view/"><button type="button" class="btn btn-primary btn-lg">Databases</button></a><br/><br/>
+  <a href="<?= BASE_URL ?>/dockerswarmrelation/view/"><button type="button" class="btn btn-primary btn-lg">Docker Swarms</button></a><br/><br/>
+  <a href="<?= BASE_URL ?>/hardwareloadbalancerrelation/view/"><button type="button" class="btn btn-primary btn-lg">Hardware Load Balancers</button></a><br/><br/>
+  <a href="<?= BASE_URL ?>/applicationrelation/view/"><button type="button" class="btn btn-primary btn-lg">Applications</button></a><br/><br/>
 
 
 </main>

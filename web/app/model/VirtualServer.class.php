@@ -1,8 +1,8 @@
 <?php
 
-class PhysicalServer {
+class VirtualServer {
   // Database table name
-  const DB_TABLE = 'PhysicalServer';
+  const DB_TABLE = 'VirtualServer';
 
   // Database fields for comment
   public $name = '';
@@ -27,13 +27,12 @@ class PhysicalServer {
       // Get results as associative array
       $row = $result->fetch_assoc();
       // Instantiate new Life Event object
-      $cm = new PhysicalServer();
+      $cm = new VirtualServer();
 
       // Store db results in into a Comment object
-      $cm->name             = $row['Sname'];
-      $cm->SAN              = $row['SAN'];
-      $cm->admin            = $row['admin'];
-      $cm->backupAdmin      = $row['backupAdmin'];
+      $cm->name             = $row['Xname'];
+      $cm->admin            = $row['Xadmin'];
+      $cm->backupAdmin      = $row['XbackupAdmin'];
 
       // Return the comment
       return $cm;
@@ -56,7 +55,7 @@ class PhysicalServer {
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      $physicalservers[] = self::loadById($row['Sname']);
+      $physicalservers[] = self::loadById($row['Xname']);
     }
     //Return the comments
     return $physicalservers;

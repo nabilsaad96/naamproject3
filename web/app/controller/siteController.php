@@ -170,9 +170,54 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/showPhysicalServers.tpl';
+		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
+	public function showVirtualServer() {
+		$pageTitle = 'Virtual Server Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDS() {
+		$pageTitle = 'Docker Swarm Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showHLB() {
+		$pageTitle = 'Hardware Load Balancer Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDatabase() {
+		$pageTitle = 'Database Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showApp() {
+		$pageTitle = 'Application Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
 
 	public function login() {
 		$pageTitle = 'Login';
