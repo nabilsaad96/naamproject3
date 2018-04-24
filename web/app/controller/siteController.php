@@ -64,6 +64,11 @@ class SiteController {
 				$this->showVirtualServer();
 				break;
 
+			case 'showHLB':
+				$this->showHLB();
+				break;
+
+
 			case 'signupProcess':
 				$username = $_POST['username'];
 				$password = $_POST['pw'];
@@ -198,7 +203,7 @@ class SiteController {
 	public function showHLB() {
 		$pageTitle = 'Hardware Load Balancer Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		$rl = HardwareLoadBalancer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';

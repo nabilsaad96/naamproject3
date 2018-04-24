@@ -1,8 +1,8 @@
 <?php
 
-class VirtualServer {
+class HardwareLoadBalancer {
   // Database table name
-  const DB_TABLE = 'VirtualServer';
+  const DB_TABLE = 'HardwareLoadBalancers';
 
   // Database fields for comment
   public $name = '';
@@ -14,7 +14,7 @@ class VirtualServer {
       // Connect to database
       $db = Db::instance();
       // Database query
-      $q = sprintf("SELECT * FROM `%s` WHERE Xname = '%s';", self::DB_TABLE, $id);
+      $q = sprintf("SELECT * FROM `%s` WHERE F5name = '%s';", self::DB_TABLE, $id);
       //echo($q);
       // Do the query
       $result = $db->query($q);
@@ -29,9 +29,9 @@ class VirtualServer {
       $cm = new VirtualServer();
 
       // Store db results in into a Comment object
-      $cm->name             = $row['Xname'];
-      $cm->admin            = $row['Xadmin'];
-      $cm->backupAdmin      = $row['XbackupAdmin'];
+      $cm->name             = $row['F5name'];
+      $cm->admin            = $row['F5admin'];
+      $cm->backupAdmin      = $row['F5backupAdmin'];
 
       // Return the comment
       return $cm;
@@ -54,7 +54,7 @@ class VirtualServer {
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      $physicalservers[] = self::loadById($row['Xname']);
+      $physicalservers[] = self::loadById($row['F5name']);
     }
     //Return the comments
     return $physicalservers;
