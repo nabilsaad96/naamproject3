@@ -34,8 +34,6 @@ class PhysicalServer {
       $cm->SAN              = $row['SAN'];
       $cm->admin            = $row['admin'];
       $cm->backupAdmin     = $row['backupAdmin'];
-      echo($row['backupAdmin']);
-
 
       // Return the comment
       return $cm;
