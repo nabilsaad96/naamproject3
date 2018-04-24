@@ -55,7 +55,11 @@ class PhysicalServer {
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      echo($row);
+      echo($row['name']);
+      echo($row['SAN']);
+      echo($row['admin']);
+      echo($row['backupAdmin']);
+
       $physicalservers[] = self::loadById($row['name']);
 
     }
