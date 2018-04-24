@@ -76,6 +76,9 @@ class SiteController {
 				$this->showDS();
 				break;
 
+			case 'showApp':
+				$this->showApp();
+				break;
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -229,7 +232,7 @@ class SiteController {
 	public function showApp() {
 		$pageTitle = 'Application Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		$rl = Application::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
