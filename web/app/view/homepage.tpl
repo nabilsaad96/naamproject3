@@ -11,7 +11,7 @@
 
   <div class="row">
     <div class="col-4">
-      <h2>Relations</h2>
+      <h2 style="margin-left:30px;">Relations</h2>
       <div class="list-group" style="margin-left:30px;">
         <a href="<?= BASE_URL ?>/physicalserverrelation/view/" class="list-group-item list-group-item-action">Physical Servers</a>
         <a href="<?= BASE_URL ?>/virtualserverrelation/view/" class="list-group-item list-group-item-action">Virtual Servers</a>
@@ -24,7 +24,7 @@
     <div class="col-4">
     </div>
     <div class="col-4">
-      <h2>Queries</h2>
+      <h2 style="margin-left:30px;">Queries</h2>
       <div class="list-group" style="margin-right:30px;">
         <a href="<?= BASE_URL ?>/physicalserverrelation/view/" class="list-group-item list-group-item-action">Physical Servers</a>
         <a href="<?= BASE_URL ?>/virtualserverrelation/view/" class="list-group-item list-group-item-action">Virtual Servers</a>
