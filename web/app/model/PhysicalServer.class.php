@@ -30,7 +30,7 @@ class PhysicalServer {
       $cm = new PhysicalServer();
 
       // Store db results in into a Comment object
-      $cm->name             = $row['name'];
+      $cm->name             = $row['Sname'];
       $cm->SAN              = $row['SAN'];
       $cm->admin            = $row['admin'];
       $cm->$backupAdmin     = $row['backupAdmin'];
@@ -55,12 +55,7 @@ class PhysicalServer {
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      echo($row['name']);
-      echo($row['SAN']);
-      echo($row['admin']);
-      echo($row['backupAdmin']);
-
-      $physicalservers[] = self::loadById($row['name']);
+      $physicalservers[] = self::loadById($row['Sname']);
 
     }
 
