@@ -30,8 +30,8 @@ class HardwareLoadBalancer {
 
       // Store db results in into a Comment object
       $cm->name             = $row['F5name'];
-      $cm->admin            = $row['F5admin'];
-      $cm->backupAdmin      = $row['F5backupAdmin'];
+      $cm->admin            = $row['FSadmin'];
+      $cm->backupAdmin      = $row['FSbackupAdmin'];
 
       // Return the comment
       return $cm;
