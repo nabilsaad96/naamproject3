@@ -16,6 +16,7 @@ class PhysicalServer {
       $db = Db::instance();
       // Database query
       $q = sprintf("SELECT * FROM `%s` WHERE Sname = %s;", self::DB_TABLE, $id);
+      echo($q);
       // Do the query
       $result = $db->query($q);
       // If nothing found
@@ -44,7 +45,6 @@ class PhysicalServer {
     $q = sprintf("SELECT * FROM `%s`;",
       self::DB_TABLE
       );
-      echo($q);
     // Do the query
     $result = $db->query($q);
     // If nothing found
