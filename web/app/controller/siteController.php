@@ -265,7 +265,7 @@ class SiteController {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 
-		//include_once SYSTEM_PATH.'/view/log.tpl';
+		////include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 
 	}
