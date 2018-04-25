@@ -6,17 +6,13 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">Admin</th>
-          <th scope="col">Backup Admin</th>
         </tr>
       </thead>
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <tr onclick="window.location='<?= BASE_URL ?>/applicationrelationdept/<?=$r->name?>/view/';">
+              <tr onclick="window.location='<?= BASE_URL ?>/';">
                 <td><?= $r->name ?></td>
-                <td><?= $r->admin ?></td>
-                <td><?= $r->backupAdmin ?></td>
               </tr>
             <?php endforeach; ?>
           <?php endif; ?>
