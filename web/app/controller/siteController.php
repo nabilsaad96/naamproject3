@@ -451,8 +451,7 @@ class SiteController {
 	public function showVirtualServerDept($n) {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = VirtualServer::loadAll($n);
-		$status = 'v';
+		$rl = VirtualServer::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -461,8 +460,7 @@ class SiteController {
 	public function showDSDept($n) {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = DockerSwarm::loadAll($n);
-		$status = 'ds';
+		$rl = DockerSwarm::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -471,8 +469,7 @@ class SiteController {
 	public function showHLBDept($n) {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = HardwareLoadBalancer::loadAll($n);
-		$status = 'hlb';
+		$rl = HardwareLoadBalancer::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -481,8 +478,7 @@ class SiteController {
 	public function showDatabaseDept($n) {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Database::loadAll($n);
-		$status = 'db';
+		$rl = Database::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -491,8 +487,7 @@ class SiteController {
 	public function showAppDept($n) {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Application::loadAll($n);
-		$status = 'app';
+		$rl = Application::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
