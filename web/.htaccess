@@ -90,6 +90,12 @@ RewriteRule ^applicationrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteC
 
 # make changes
 RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeChanges [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makePhysical [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeVirtual [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeDB [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeDS [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeHLB [QSA,L]
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeApp [QSA,L]
 
 # recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
