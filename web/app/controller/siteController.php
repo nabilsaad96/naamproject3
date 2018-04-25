@@ -653,6 +653,8 @@ class SiteController {
 	public function makePhysical() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
 		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
