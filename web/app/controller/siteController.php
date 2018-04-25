@@ -208,7 +208,7 @@ class SiteController {
 
 			case 'adhoc':
 				$query = $_POST['query'];
-				$this->adhoc($q);
+				$this->adhoc($query);
 				break;
 
 			case 'signupProcess':
