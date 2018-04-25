@@ -77,7 +77,7 @@ RewriteRule ^applicationrelationdept/view/?$ app/controller/siteController.php?a
 RewriteRule ^physicalserverrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showPhysicalServerDep&name=$1 [QSA,L]
 RewriteRule ^virtualserverrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showVirtualServerDep&name=$1 [QSA,L]
 RewriteRule ^dockerswarmrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDSDep&name=$1 [QSA,L]
-RewriteRule ^hardwareloadbalancerrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showHLBDep&name=$1 [QSA,L]
+RewriteRule ^hardwareloadbalancerrelationdep/([a-zA-Z0-9_-]+)/view/?$ app/controller/siteController.php?action=showHLBDep&name=$1 [QSA,L]
 RewriteRule ^databaserelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDatabaseDep&name=$1 [QSA,L]
 RewriteRule ^applicationrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showAppDep&name=$1 [QSA,L]
 
