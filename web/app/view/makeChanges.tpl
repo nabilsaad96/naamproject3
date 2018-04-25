@@ -4,12 +4,12 @@
     <h2 class="text-center">Update Administrator of Configuration Item</h2>
     <p class="text-center">Select a configuration item to update the administrator of and enter the name of the new administrator.</p>
     <div class="list-group" style="margin-right:30px;">
-      <a href="<?= BASE_URL ?>/makeChanges/Physical/view/" class="list-group-item list-group-item-action">Physical Servers</a>
-      <a href="<?= BASE_URL ?>/makeChanges/Virtual/view/" class="list-group-item list-group-item-action">Virtual Servers</a>
-      <a href="<?= BASE_URL ?>/makeChanges/Database/view/" class="list-group-item list-group-item-action">Databases</a>
-      <a href="<?= BASE_URL ?>/makeChanges/Docker/view/" class="list-group-item list-group-item-action">Docker Swarms</a>
-      <a href="<?= BASE_URL ?>/makeChanges/Hardware/view/" class="list-group-item list-group-item-action">Hardware Load Balancers</a>
-      <a href="<?= BASE_URL ?>/makeChanges/Application/view/" class="list-group-item list-group-item-action">Applications</a>
+      <a href="<?= BASE_URL ?>/makeChanges/physical/view/" class="list-group-item list-group-item-action">Physical Servers</a>
+      <a href="<?= BASE_URL ?>/makeChanges/virtual/view/" class="list-group-item list-group-item-action">Virtual Servers</a>
+      <a href="<?= BASE_URL ?>/makeChanges/database/view/" class="list-group-item list-group-item-action">Databases</a>
+      <a href="<?= BASE_URL ?>/makeChanges/docker/view/" class="list-group-item list-group-item-action">Docker Swarms</a>
+      <a href="<?= BASE_URL ?>/makeChanges/hardware/view/" class="list-group-item list-group-item-action">Hardware Load Balancers</a>
+      <a href="<?= BASE_URL ?>/makeChanges/application/view/" class="list-group-item list-group-item-action">Applications</a>
     </div>
   </div>
 
