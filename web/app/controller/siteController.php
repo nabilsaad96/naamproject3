@@ -386,6 +386,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+//to actually get the dependencies
 	public function showPhysicalServerDep() {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
@@ -504,12 +505,13 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+//to show the tuples to allow the user to choose
 	public function showPhysicalServerDe() {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/physicaldependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 	public function showVirtualServerDe() {
@@ -517,7 +519,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/virtualdependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
