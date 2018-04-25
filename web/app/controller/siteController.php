@@ -81,50 +81,62 @@ class SiteController {
 				break;
 
 			case 'showPhysicalServerDep':
+				$n = $_GET['name'];
 				$this->showPhysicalServerDep();
 				break;
 
 			case 'showVirtualServerDep':
+				$n = $_GET['name'];
 				$this->showVirtualServerDep();
 				break;
 
 			case 'showHLBDep':
+				$n = $_GET['name'];
 				$this->showHLBDep();
 				break;
 
 			case 'showDatabaseDep':
+				$n = $_GET['name'];
 				$this->showDatabaseDep();
 				break;
 
 			case 'showDSDep':
+				$n = $_GET['name'];
 				$this->showDSDep();
 				break;
 
 			case 'showAppDep':
+				$n = $_GET['name'];
 				$this->showAppDep();
 				break;
 
 			case 'showPhysicalServerDept':
+				$n = $_GET['name'];
 				$this->showPhysicalServerDept();
 				break;
 
 			case 'showVirtualServerDept':
+				$n = $_GET['name'];
 				$this->showVirtualServerDept();
 				break;
 
 			case 'showHLBDept':
+				$n = $_GET['name'];
 				$this->showHLBDept();
 				break;
 
 			case 'showDatabaseDept':
+				$n = $_GET['name'];
 				$this->showDatabaseDept();
 				break;
 
 			case 'showDSDept':
+				$n = $_GET['name'];
 				$this->showDSDept();
 				break;
 
 			case 'showAppDept':
+				$n = $_GET['name'];
 				$this->showAppDept();
 				break;
 

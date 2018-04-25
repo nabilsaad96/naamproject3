@@ -7,7 +7,7 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Admin</th>
-          <th scope="col">Timestamp</th>
+          <th scope="col">Last Change</th>
         </tr>
       </thead>
         <tbody>

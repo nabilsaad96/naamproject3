@@ -60,19 +60,19 @@ RewriteRule ^applicationrelation/view/?$ app/controller/siteController.php?actio
 RewriteRule ^dependency/view/?$ app/controller/siteController.php?action=dependencyOptions [QSA,L]
 RewriteRule ^dependent/view/?$ app/controller/siteController.php?action=dependentOptions [QSA,L]
 
-RewriteRule ^physicalserverrelationdep/view/?$ app/controller/siteController.php?action=showPhysicalServerDep [QSA,L]
-RewriteRule ^virtualserverrelationdep/view/?$ app/controller/siteController.php?action=showVirtualServerDep [QSA,L]
-RewriteRule ^dockerswarmrelationdep/view/?$ app/controller/siteController.php?action=showDSDep [QSA,L]
-RewriteRule ^hardwareloadbalancerrelationdep/view/?$ app/controller/siteController.php?action=showHLBDep [QSA,L]
-RewriteRule ^databaserelationdep/view/?$ app/controller/siteController.php?action=showDatabaseDep [QSA,L]
-RewriteRule ^applicationrelationdep/view/?$ app/controller/siteController.php?action=showAppDep [QSA,L]
+RewriteRule ^physicalserverrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showPhysicalServerDep&name=$1 [QSA,L]
+RewriteRule ^virtualserverrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showVirtualServerDep&name=$1 [QSA,L]
+RewriteRule ^dockerswarmrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDSDep&name=$1 [QSA,L]
+RewriteRule ^hardwareloadbalancerrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showHLBDep&name=$1 [QSA,L]
+RewriteRule ^databaserelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDatabaseDep&name=$1 [QSA,L]
+RewriteRule ^applicationrelationdep/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showAppDep&name=$1 [QSA,L]
 
-RewriteRule ^physicalserverrelationdept/view/?$ app/controller/siteController.php?action=showPhysicalServerDept [QSA,L]
-RewriteRule ^virtualserverrelationdept/view/?$ app/controller/siteController.php?action=showVirtualServerDept [QSA,L]
-RewriteRule ^dockerswarmrelationdept/view/?$ app/controller/siteController.php?action=showDSDept [QSA,L]
-RewriteRule ^hardwareloadbalancerrelationdept/view/?$ app/controller/siteController.php?action=showHLBDept [QSA,L]
-RewriteRule ^databaserelationdept/view/?$ app/controller/siteController.php?action=showDatabaseDept [QSA,L]
-RewriteRule ^applicationrelationdept/view/?$ app/controller/siteController.php?action=showAppDept [QSA,L]
+RewriteRule ^physicalserverrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showPhysicalServerDept&name=$1 [QSA,L]
+RewriteRule ^virtualserverrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showVirtualServerDept [QSA,L]
+RewriteRule ^dockerswarmrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDSDept&name=$1 [QSA,L]
+RewriteRule ^hardwareloadbalancerrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showHLBDept&name=$1 [QSA,L]
+RewriteRule ^databaserelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDatabaseDept&name=$1 [QSA,L]
+RewriteRule ^applicationrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showAppDept&name=$1 [QSA,L]
 
-
+# recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
