@@ -557,7 +557,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/physicaldependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 	public function showVirtualServerDet() {
@@ -565,7 +565,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/virtualdependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -574,7 +574,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/dsdependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -583,7 +583,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/hlbdependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -592,7 +592,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/dbdependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -601,7 +601,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/appdependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
