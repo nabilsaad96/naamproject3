@@ -335,9 +335,9 @@ class SiteController {
 	public function showPhysicalServer() {
 		$pageTitle = 'Physical Server Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loaddep($n);
+		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -390,8 +390,7 @@ class SiteController {
 	public function showPhysicalServerDep() {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
-		$status = 'p';
+		$rl = PhysicalServer::loaddep($n);
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
