@@ -408,7 +408,7 @@ class SiteController {
 	public function showDSDep($n) {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = DockerSwarm::loadAll($n);
+		$rl = DockerSwarm::loaddep($n);
 		$status = 'ds';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
@@ -418,7 +418,7 @@ class SiteController {
 	public function showHLBDep($n) {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = HardwareLoadBalancer::loadAll($n);
+		$rl = HardwareLoadBalancer::loaddep($n);
 		$status = 'hlb';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
@@ -428,7 +428,7 @@ class SiteController {
 	public function showDatabaseDep($n) {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Database::loadAll($n);
+		$rl = Database::loaddep($n);
 		$status = 'db';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
@@ -438,7 +438,7 @@ class SiteController {
 	public function showAppDep($n) {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Application::loadAll($n);
+		$rl = Application::loaddep($n);
 		$status = 'app';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';

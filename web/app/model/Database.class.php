@@ -60,6 +60,10 @@ class Database {
     return $physicalservers;
   }
 
+  public static function loaddep($id) {
+        return null;
+  }
+
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
