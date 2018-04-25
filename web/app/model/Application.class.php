@@ -41,7 +41,7 @@ class Application {
       // Connect to database
       $db = Db::instance();
       // Database query
-      $q = sprintf("  SELECT Sname AS name FROM Virtualizes WHERE Xname IN (SELECT Xname AS name FROM Runs WHERE DSname IN (SELECT DSname AS name FROM Hosts WHERE Aname='%s')
+      $q = sprintf("SELECT Sname AS name FROM Virtualizes WHERE Xname IN (SELECT Xname AS name FROM Runs WHERE DSname IN (SELECT DSname AS name FROM Hosts WHERE Aname='%s')
         )
         UNION
         SELECT Xname AS name FROM Runs WHERE DSname IN (SELECT DSname AS name FROM Hosts WHERE Aname='%s')
