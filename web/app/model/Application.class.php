@@ -60,6 +60,27 @@ class Application {
     return $physicalservers;
   }
 
+  public static function loaddep($id) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("SELECT F5name AS name FROM Routes WHERE Aname='%s';", $id);
+      // Do the query
+      $result = $db->query($q);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
+
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
