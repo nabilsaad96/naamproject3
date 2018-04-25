@@ -88,6 +88,8 @@ RewriteRule ^hardwareloadbalancerrelationdept/([a-zA-Z0-9_-]+)/view/?$ app/contr
 RewriteRule ^databaserelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showDatabaseDept&name=$1 [QSA,L]
 RewriteRule ^applicationrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=showAppDept&name=$1 [QSA,L]
 
+# make changes
+RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeChanges [QSA,L]
 
 # recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
