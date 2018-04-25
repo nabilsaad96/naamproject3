@@ -15,9 +15,8 @@
 
     <div class="col-4">
       <form method="POST" action="<?= BASE_URL ?>/adhoc/" class="form-signin text-center">
-        <h3 class="text-center">Enter Administrator Name</h3>
         <div class="input-group">
-          <input type="text" class="form-control" name="adminName" placeholder="Enter Administrator Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          Enter Administrator Name: <input type="text" class="form-control" name="adminName" aria-label="Recipient's username" aria-describedby="basic-addon2">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" onclick="window.location='<?= BASE_URL ?>';" type="button">Clear</button>
           </div>
