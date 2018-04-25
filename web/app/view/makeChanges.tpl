@@ -1,8 +1,8 @@
 <a href="<?= BASE_URL ?>">Go Back</a>
-<div class="row justify-content-md-center">
+<div class="row">
   <div class="col-4">
-    <h2 class="text-center">View Items that Depend on Selected Item</h2>
-    <p class="text-center">Select a configuration item type to see what depends on it.</p>
+    <h2>Update Administrator of Configuration Item</h2>
+    <p>Select a configuration item to update the administrator of and enter the name of the new administrator.</p>
 
     <div class="list-group" style="margin-right:30px;">
       <a href="<?= BASE_URL ?>/physicalserverrelationdept/view/" class="list-group-item list-group-item-action">Physical Servers</a>

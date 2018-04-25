@@ -202,7 +202,9 @@ class SiteController {
 				$this->showChanges();
 				break;
 
-
+			case 'makeChanges':
+				$this->makeChanges();
+				break;
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -284,6 +286,13 @@ class SiteController {
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeChanges() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 

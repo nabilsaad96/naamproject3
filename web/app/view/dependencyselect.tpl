@@ -1,7 +1,8 @@
-<div class="row">
+<div class="row justify-content-md-center">
   <div class="col-4">
-    <h2>List Dependencies</h2>
-    <p>Shows which applications depend on the selected item to run</p>
+    <h2 class="text-center">View Items that Selected Item Depends On</h2>
+    <p class="text-center">Select a configuration item type to see what it depends on.</p>
+
     <div class="list-group" style="margin-right:30px;">
       <a href="<?= BASE_URL ?>/physicalserverrelationdep/view/" class="list-group-item list-group-item-action">Physical Servers</a>
       <a href="<?= BASE_URL ?>/virtualserverrelationdep/view/" class="list-group-item list-group-item-action">Virtual Servers</a>
