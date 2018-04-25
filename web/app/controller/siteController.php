@@ -398,7 +398,7 @@ class SiteController {
 	public function showVirtualServerDep($n) {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = VirtualServer::loadAll($n);
+		$rl = VirtualServer::loaddep($n);
 		$status = 'v';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
