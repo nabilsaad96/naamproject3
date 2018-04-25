@@ -73,3 +73,6 @@ RewriteRule ^dockerswarmrelationdept/view/?$ app/controller/siteController.php?a
 RewriteRule ^hardwareloadbalancerrelationdept/view/?$ app/controller/siteController.php?action=showHLBDept [QSA,L]
 RewriteRule ^databaserelationdept/view/?$ app/controller/siteController.php?action=showDatabaseDept [QSA,L]
 RewriteRule ^applicationrelationdept/view/?$ app/controller/siteController.php?action=showAppDept [QSA,L]
+
+
+RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]

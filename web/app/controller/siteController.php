@@ -136,6 +136,11 @@ class SiteController {
 				$this->dependentOptions();
 				break;
 
+			case 'showChanges':
+				$this->showChanges();
+				break;
+
+
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -211,6 +216,14 @@ class SiteController {
 		}
 	}
 
+	public function showChanges() {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
 
 
 	public function specificPerson() {
