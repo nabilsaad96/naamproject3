@@ -12,5 +12,19 @@
       <a href="<?= BASE_URL ?>/hardwareloadbalancerrelationdept/view/" class="list-group-item list-group-item-action">Hardware Load Balancers</a>
       <a href="<?= BASE_URL ?>/applicationrelationdept/view/" class="list-group-item list-group-item-action">Applications</a>
     </div>
+
+    <div class="col-4">
+      <form method="POST" action="<?= BASE_URL ?>/adhoc/" class="form-signin text-center">
+        <h3>Ad-Hoc Query</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" name="adminName" placeholder="Enter Administrator Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" onclick="window.location='<?= BASE_URL ?>';" type="button">Clear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <button type="submit" type="button">Submit</button>
   </div>
 </div>

@@ -56,6 +56,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL ?>/showRecentChanges/">Recent DB Changes</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= BASE_URL ?>/makeChanges/view/">Make DB Change</a>
+        </li>
       </ul>
       <?php if(isset($_SESSION['username'])): ?>
         <!-- Logged in:-->
