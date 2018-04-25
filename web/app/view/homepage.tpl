@@ -21,8 +21,19 @@
         <a href="<?= BASE_URL ?>/applicationrelation/view/" class="list-group-item list-group-item-action">Applications</a>
       </div>
     </div>
+
     <div class="col-4">
+      <form method="POST" action="<?= BASE_URL ?>/login/process/" class="form-signin text-center">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" onclick="window.location='<?= BASE_URL ?>';" type="button">Clear</button>
+            <button type="submit" class="btn btn-outline-secondary" type="button">Submit</button>
+          </div>
+        </div>
+      </form>
     </div>
+
     <div class="col-4">
       <h2>List Dependencies</h2>
       <div class="list-group" style="margin-right:30px;">
