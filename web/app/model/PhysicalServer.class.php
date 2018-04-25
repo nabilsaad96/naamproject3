@@ -39,6 +39,44 @@ class PhysicalServer {
       return $cm;
   }
 
+  public static function loaddep($id) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("SELECT F5name AS name FROM Routes
+WHERE Aname IN (SELECT Aname AS name FROM Hosts
+WHERE DSname IN (SELECT DSname AS name FROM Runs
+WHERE Xname IN (SELECT Xname FROM Virtualizes WHERE Sname='%s')))
+UNION
+SELECT Aname AS name FROM Hosts
+WHERE DSname IN (SELECT DSname AS name FROM Runs
+WHERE Xname IN (SELECT Xname FROM Virtualizes WHERE Sname='%s'))
+UNION
+SELECT DSname AS name FROM Runs
+WHERE Xname IN (SELECT Xname FROM Virtualizes WHERE Sname='%s')
+UNION
+SELECT PGname AS name FROM Contains
+WHERE Xname IN (SELECT Xname FROM Virtualizes WHERE Sname='%s')
+UNION
+SELECT Xname FROM Virtualizes WHERE Sname='%s';", self::DB_TABLE, $id,$id,$id,$id,$id);
+      //echo($q);
+      // Do the query
+      $result = $db->query($q);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
+
+
   public static function loadAll() {
     // Connect to database
     $db = Db::instance();
