@@ -18,5 +18,8 @@
           <?php endif; ?>
         </tbody>
       </table>
+      <?php if($rl == null): ?>
+        <h3>No Dependencies</h3>
+      <?php endif; ?>
     </div>
 </div>
