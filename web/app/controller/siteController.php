@@ -395,109 +395,109 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
-	public function showVirtualServerDep() {
+	public function showVirtualServerDep($n) {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = VirtualServer::loadAll();
+		$rl = VirtualServer::loadAll($n);
 		$status = 'v';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showDSDep() {
+	public function showDSDep($n) {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = DockerSwarm::loadAll();
+		$rl = DockerSwarm::loadAll($n);
 		$status = 'ds';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showHLBDep() {
+	public function showHLBDep($n) {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = HardwareLoadBalancer::loadAll();
+		$rl = HardwareLoadBalancer::loadAll($n);
 		$status = 'hlb';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showDatabaseDep() {
+	public function showDatabaseDep($n) {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Database::loadAll();
+		$rl = Database::loadAll($n);
 		$status = 'db';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showAppDep() {
+	public function showAppDep($n) {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Application::loadAll();
+		$rl = Application::loadAll($n);
 		$status = 'app';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showPhysicalServerDept() {
+	public function showPhysicalServerDept($n) {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll();
+		$rl = PhysicalServer::loadAll($n);
 		$status = 'p';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
-	public function showVirtualServerDept() {
+	public function showVirtualServerDept($n) {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = VirtualServer::loadAll();
+		$rl = VirtualServer::loadAll($n);
 		$status = 'v';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showDSDept() {
+	public function showDSDept($n) {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = DockerSwarm::loadAll();
+		$rl = DockerSwarm::loadAll($n);
 		$status = 'ds';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showHLBDept() {
+	public function showHLBDept($n) {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = HardwareLoadBalancer::loadAll();
+		$rl = HardwareLoadBalancer::loadAll($n);
 		$status = 'hlb';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showDatabaseDept() {
+	public function showDatabaseDept($n) {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Database::loadAll();
+		$rl = Database::loadAll($n);
 		$status = 'db';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function showAppDept() {
+	public function showAppDept($n) {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = Application::loadAll();
+		$rl = Application::loadAll($n);
 		$status = 'app';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';

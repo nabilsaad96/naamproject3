@@ -37,6 +37,34 @@ class VirtualServer {
       return $cm;
   }
 
+  public static function loaddep($id) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("SELECT F5name AS name FROM Routes WHERE Aname IN (SELECT Aname AS name FROM Hosts WHERE DSname IN (SELECT DSname AS name FROM Runs WHERE Xname='%s'))
+UNION
+SELECT Aname AS name FROM Hosts WHERE DSname IN (SELECT DSname AS name FROM Runs WHERE Xname='%s')
+UNION
+SELECT DSname AS name FROM Runs WHERE Xname='%s'
+UNION
+SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
+      echo($q);
+      // Do the query
+      $result = $db->query($q);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
+
   public static function loadAll() {
     // Connect to database
     $db = Db::instance();
