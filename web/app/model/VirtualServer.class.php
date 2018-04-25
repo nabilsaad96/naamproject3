@@ -56,7 +56,7 @@ SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
       if($result->num_rows == 0) {
         return null;
       }
-      echo($result->num_rows)
+      echo($result->num_rows);
       echo($q);
 
       $physicalservers = array();
