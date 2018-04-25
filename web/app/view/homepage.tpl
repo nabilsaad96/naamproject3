@@ -36,12 +36,12 @@
     </div>
 
     <div class="col-4">
-      <h2>List Dependencies</h2>
+      <h2>Query Options</h2>
       <div class="list-group" style="margin-right:30px;">
-        <a href="<?= BASE_URL ?>/dependency/view/" class="list-group-item list-group-item-action">Depended On</a>
+        <a href="<?= BASE_URL ?>/dependency/view/" class="list-group-item list-group-item-action">Depends On</a>
         <a href="<?= BASE_URL ?>/dependent/view/" class="list-group-item list-group-item-action">Dependent Upon</a>
         <a href="<?= BASE_URL ?>/showRecentChanges/" class="list-group-item list-group-item-action">Recent Changes</a>
-        <a href="<?= BASE_URL ?>/makeChanges/view/" class="list-group-item list-group-item-action">Docker Swarms</a>
+        <a href="<?= BASE_URL ?>/makeChanges/view/" class="list-group-item list-group-item-action">Make Changes</a>
       </div>
     </div>
   </div>
