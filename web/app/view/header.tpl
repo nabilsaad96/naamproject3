@@ -48,13 +48,13 @@
           <a class="nav-link" href="<?= BASE_URL ?>">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= BASE_URL ?>/getRandom/process">Explore</a>
+          <a class="nav-link" href="<?= BASE_URL ?>/dependency/view/">Dependencies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= BASE_URL ?>/stories/">Stories</a>
+          <a class="nav-link" href="<?= BASE_URL ?>/dependent/view/">Dependents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= BASE_URL ?>/help/">Help</a>
+          <a class="nav-link" href="<?= BASE_URL ?>/showRecentChanges/">Recent DB Changes</a>
         </li>
       </ul>
       <?php if(isset($_SESSION['username'])): ?>
