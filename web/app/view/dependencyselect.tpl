@@ -1,6 +1,6 @@
 <div class="row justify-content-md-center">
   <div class="col-4">
-    <h2 class="text-center">View Items that Selected Item Depends On</h2>
+    <h2 class="text-center">View Items that Depend on Selected Item</h2>
     <p class="text-center">Select a configuration item type to see what it depends on.</p>
 
     <div class="list-group" style="margin-right:30px;">
