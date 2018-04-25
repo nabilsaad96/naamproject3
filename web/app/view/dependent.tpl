@@ -22,5 +22,8 @@
           <?php endif; ?>
         </tbody>
       </table>
+      <?php if($rl == null): ?>
+        <h3>Not Dependent on Anything</h3>
+      <?php endif; ?>
     </div>
 </div>

@@ -443,7 +443,7 @@ class SiteController {
 	public function showPhysicalServerDept($n) {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::loadAll($n);
+		$rl = PhysicalServer::loaddet($n);
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';

@@ -38,6 +38,9 @@ class PhysicalServer {
       // Return the comment
       return $cm;
   }
+  public static function loaddet($id) {
+        return null;
+  }
 
   public static function loaddep($id) {
       // Connect to database
