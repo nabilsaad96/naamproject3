@@ -71,6 +71,7 @@ class Application {
       // Do the query
       $result = $db->query($q);
       echo($q);
+      echo($result->num_rows);
       // If nothing found
       if($result->num_rows == 0) {
         return null;
