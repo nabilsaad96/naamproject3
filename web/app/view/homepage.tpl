@@ -23,10 +23,10 @@
     </div>
 
     <div class="col-4">
-      <form method="POST" action="<?= BASE_URL ?>/login/process/" class="form-signin text-center">
+      <form method="POST" action="<?= BASE_URL ?>/adhoc/" class="form-signin text-center">
         <h3>Ad-Hoc Query</h3>
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Enter Query" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <input type="text" class="form-control" name="query" placeholder="Enter Query" aria-label="Recipient's username" aria-describedby="basic-addon2">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" onclick="window.location='<?= BASE_URL ?>';" type="button">Clear</button>
             <button type="submit" class="btn btn-outline-secondary" type="button">Submit</button>
