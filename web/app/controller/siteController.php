@@ -268,8 +268,12 @@ class SiteController {
 	public function adhoc($q) {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$r1 = Application::doQuery($q);
-		include_once SYSTEM_PATH.'/view/complexquery.tpl';
+		//$r1 = Application::doQuery($q);
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/showall.tpl';
+
+		//include_once SYSTEM_PATH.'/view/complexquery.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 
 	}
