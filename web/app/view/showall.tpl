@@ -13,13 +13,11 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <a href="<?= BASE_URL ?>">
-              <tr>
+              <tr onclick="window.location='<?= BASE_URL ?>';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
               </tr>
-            </a>
             <?php endforeach; ?>
           <?php endif; ?>
         </tbody>
