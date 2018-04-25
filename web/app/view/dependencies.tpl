@@ -13,9 +13,9 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <?php if(status=='v'): ?>
+              <?php if($status == 'v'): ?>
                 <tr onclick="window.location='<?= BASE_URL ?>';">
-              <? php endif; ?> 
+              <? php endif; ?>
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
