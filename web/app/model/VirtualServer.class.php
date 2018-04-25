@@ -51,10 +51,13 @@ SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
       echo($q);
       // Do the query
       $result = $db->query($q);
+      echo($q);
       // If nothing found
       if($result->num_rows == 0) {
         return null;
       }
+      echo($result->num_rows)
+      echo($q);
 
       $physicalservers = array();
       //Turn the id's into full comments
