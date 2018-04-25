@@ -264,7 +264,7 @@ class SiteController {
 	}
 
 	public function showPhysicalServerDep() {
-		$pageTitle = 'Physical Server Relation Dependencies';
+		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
@@ -272,7 +272,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 	public function showVirtualServerDep() {
-		$pageTitle = 'Virtual Server Relation Dependencies';
+		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
 
@@ -281,25 +281,25 @@ class SiteController {
 	}
 
 	public function showDSDep() {
-		$pageTitle = 'Docker Swarm Dependencies Relation';
+		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
 
-		include_once SYSTEM_PATH.'dependencieshowall.tpl';
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function showHLBDep() {
-		$pageTitle = 'Hardware Load Dependencies Balancer Relation';
+		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
 
-		include_once SYSTEM_PATH.'/dependenciesowall.tpl';
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function showDatabaseDep() {
-		$pageTitle = 'Database Relation' Dependencies;
+		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
 
@@ -308,11 +308,11 @@ class SiteController {
 	}
 
 	public function showAppDep() {
-		$pageTitle = 'Application R Dependencieselation';
+		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
 
-		include_once SYSTEM_PATH.'/dependenciesowall.tpl';
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
