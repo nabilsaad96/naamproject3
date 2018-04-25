@@ -202,7 +202,10 @@ class SiteController {
 				$this->showChanges();
 				break;
 
-
+			case 'adhoc':
+				$query = $_POST['query'];
+				$this->adhoc($q);
+				break;
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -258,6 +261,14 @@ class SiteController {
 		header('Location: '.BASE_URL.'/login'); exit();
 	}
 
+	public function adhoc($q) {
+		$pageTitle = 'Ad Hoc Query';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+
+		//include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+
+	}
 
 	public function loginProcess($un, $pw) {
 
