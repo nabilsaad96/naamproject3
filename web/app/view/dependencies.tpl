@@ -12,7 +12,7 @@
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
               <tr onclick="window.location='<?= BASE_URL ?>';">
-                <td><?= $r->name ?></td>
+                <td><?= $r ?></td>
               </tr>
             <?php endforeach; ?>
           <?php endif; ?>
