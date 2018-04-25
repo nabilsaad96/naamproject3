@@ -36,6 +36,28 @@ class DockerSwarm {
       // Return the comment
       return $cm;
   }
+  public static function loaddet($id) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("SELECT Sname AS name FROM Virtualizes WHERE Xname IN (SELECT Xname AS name FROM Runs WHERE DSname='%s')
+UNION
+SELECT Xname AS name FROM Runs WHERE DSname='%s';", $id, $id);
+      // Do the query
+      $result = $db->query($q);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
 
   public static function loadAll() {
     // Connect to database
