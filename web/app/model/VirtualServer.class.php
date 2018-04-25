@@ -37,6 +37,28 @@ class VirtualServer {
       return $cm;
   }
 
+  public static function loaddet($id) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("SELECT Sname AS name FROM Virtualizes WHERE Xname='%s';", $id);
+      // Do the query
+      $result = $db->query($q);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
+
+
   public static function loaddep($id) {
       // Connect to database
       $db = Db::instance();
