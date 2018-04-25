@@ -64,6 +64,35 @@ class Application {
       return $physicalservers;
   }
 
+  public static function doQuery($q) {
+      // Connect to database
+      $db = Db::instance();
+      // Database query
+      // Do the query
+      $result = $db->query($q);
+      echo($q);
+      echo($result->num_rows);
+      // If nothing found
+      if($result->num_rows == 0) {
+        return null;
+      }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $r->name             = $row['Aname'];
+        echo($r->name);
+        echo($row['Aname']);
+
+        $r->admin            = $row['Aadmin'];
+        $r->backupAdmin      = $row['AbackupAdmin'];
+        $physicalservers[] = self::loadById($row['Aname']);//$r;//$row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+
+    }
+
   public static function loadAll() {
     // Connect to database
     $db = Db::instance();

@@ -205,10 +205,10 @@ class SiteController {
 			case 'makeChanges':
 				$this->makeChanges();
 				break;
-				
+
 			case 'adhoc':
 				$query = $_POST['query'];
-				$this->adhoc($q);
+				$this->adhoc($query);
 				break;
 
 			case 'signupProcess':
@@ -268,8 +268,8 @@ class SiteController {
 	public function adhoc($q) {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-
-		////include_once SYSTEM_PATH.'/view/log.tpl';
+		$r1 = Application::doQuery($q);
+		include_once SYSTEM_PATH.'/view/complexquery.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 
 	}

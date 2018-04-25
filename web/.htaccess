@@ -95,4 +95,4 @@ RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeCh
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
 
 # ad hoc
-RewriteRule ^adhoc/?$ app/controller/siteController.php?action=showChanges [QSA,L]
+RewriteRule ^adhoc/?$ app/controller/siteController.php?action=adhoc [QSA,L]
