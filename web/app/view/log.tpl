@@ -7,7 +7,7 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Admin</th>
-          <th scope="col">Backup Admin</th>
+          <th scope="col">Timestamp</th>
         </tr>
       </thead>
         <tbody>
@@ -16,7 +16,7 @@
               <tr onclick="window.location='<?= BASE_URL ?>';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
-                <td><?= $r->backupAdmin ?></td>
+                <td><?= $r->timestamp ?></td>
               </tr>
             <?php endforeach; ?>
           <?php endif; ?>
