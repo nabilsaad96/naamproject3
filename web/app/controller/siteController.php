@@ -132,7 +132,7 @@ class SiteController {
 
 			case 'showPhysicalServerDep':
 				$n = $_GET['name'];
-				$this->showPhysicalServerDep();
+				$this->showPhysicalServerDep($n);
 				break;
 
 			case 'showVirtualServerDep':
@@ -387,7 +387,7 @@ class SiteController {
 	}
 
 //to actually get the dependencies
-	public function showPhysicalServerDep() {
+	public function showPhysicalServerDep($n) {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loaddep($n);

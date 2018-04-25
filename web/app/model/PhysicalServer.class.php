@@ -58,7 +58,7 @@ UNION
 SELECT PGname AS name FROM Contains
 WHERE Xname IN (SELECT Xname FROM Virtualizes WHERE Sname='%s')
 UNION
-SELECT Xname FROM Virtualizes WHERE Sname='%s';", self::DB_TABLE, $id,$id,$id,$id,$id);
+SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
       echo($q);
       // Do the query
       $result = $db->query($q);
