@@ -80,6 +80,31 @@ class SiteController {
 				$this->showApp();
 				break;
 
+			case 'showPhysicalServerDep':
+				$this->showPhysicalServerDep();
+				break;
+
+			case 'showVirtualServerDep':
+				$this->showVirtualServerDep();
+				break;
+
+			case 'showHLBDep':
+				$this->showHLBDep();
+				break;
+
+			case 'showDatabaseDep':
+				$this->showDatabaseDep();
+				break;
+
+			case 'showDSDep':
+				$this->showDSDep();
+				break;
+
+			case 'showAppDep':
+				$this->showAppDep();
+				break;
+
+
 			case 'signupProcess':
 				$username = $_POST['username'];
 				$password = $_POST['pw'];
@@ -235,6 +260,59 @@ class SiteController {
 		$rl = Application::loadAll();
 
 		include_once SYSTEM_PATH.'/view/showall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showPhysicalServerDep() {
+		$pageTitle = 'Physical Server Relation Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+	public function showVirtualServerDep() {
+		$pageTitle = 'Virtual Server Relation Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDSDep() {
+		$pageTitle = 'Docker Swarm Dependencies Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'dependencieshowall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showHLBDep() {
+		$pageTitle = 'Hardware Load Dependencies Balancer Relation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/dependenciesowall.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDatabaseDep() {
+		$pageTitle = 'Database Relation' Dependencies;
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showAppDep() {
+		$pageTitle = 'Application R Dependencieselation';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/dependenciesowall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 

@@ -55,3 +55,11 @@ RewriteRule ^dockerswarmrelation/view/?$ app/controller/siteController.php?actio
 RewriteRule ^hardwareloadbalancerrelation/view/?$ app/controller/siteController.php?action=showHLB [QSA,L]
 RewriteRule ^databaserelation/view/?$ app/controller/siteController.php?action=showDatabase [QSA,L]
 RewriteRule ^applicationrelation/view/?$ app/controller/siteController.php?action=showApp [QSA,L]
+
+# Dependencies
+RewriteRule ^physicalserverrelationdep/view/?$ app/controller/siteController.php?action=showPhysicalServerDep [QSA,L]
+RewriteRule ^virtualserverrelationdep/view/?$ app/controller/siteController.php?action=showVirtualServerDep [QSA,L]
+RewriteRule ^dockerswarmrelationdep/view/?$ app/controller/siteController.php?action=showDSDep [QSA,L]
+RewriteRule ^hardwareloadbalancerrelationdep/view/?$ app/controller/siteController.php?action=showHLBDep [QSA,L]
+RewriteRule ^databaserelationdep/view/?$ app/controller/siteController.php?action=showDatabaseDep [QSA,L]
+RewriteRule ^applicationrelationdep/view/?$ app/controller/siteController.php?action=showAppDep [QSA,L]
