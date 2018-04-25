@@ -83,7 +83,7 @@ class Application {
         $r->name             = $row['Aname'];
         $r->admin            = $row['Aadmin'];
         $r->backupAdmin      = $row['AbackupAdmin'];
-        $physicalservers[] = $r//$row['name'];
+        $physicalservers[] = $r;//$row['name'];
       }
       //Return the comments
       return $physicalservers;
