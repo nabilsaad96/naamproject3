@@ -104,6 +104,38 @@ class SiteController {
 				$this->showAppDep();
 				break;
 
+			case 'showPhysicalServerDept':
+				$this->showPhysicalServerDept();
+				break;
+
+			case 'showVirtualServerDept':
+				$this->showVirtualServerDept();
+				break;
+
+			case 'showHLBDept':
+				$this->showHLBDept();
+				break;
+
+			case 'showDatabaseDept':
+				$this->showDatabaseDept();
+				break;
+
+			case 'showDSDept':
+				$this->showDSDept();
+				break;
+
+			case 'showAppDept':
+				$this->showAppDept();
+				break;
+
+			case 'dependencyOptions':
+				$this->dependencyOptions();
+				break;
+
+			case 'dependentOptions':
+				$this->dependentOptions();
+				break;
+
 
 			case 'signupProcess':
 				$username = $_POST['username'];
@@ -195,6 +227,21 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+	public function dependencyOptions() {
+		$pageTitle = 'Show Dependencies Options';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		include_once SYSTEM_PATH.'/view/dependencyselect.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function dependentOptions() {
+		$pageTitle = 'Show Dependent Objects';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		include_once SYSTEM_PATH.'/view/dependentselect.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+
 	public function randomPerson() {
 		$stories = Story::getStories();
 		$size = count($stories);
@@ -218,6 +265,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/showall.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
+
 	public function showVirtualServer() {
 		$pageTitle = 'Virtual Server Relation';
 		include_once SYSTEM_PATH.'/view/header.tpl';
@@ -308,6 +356,59 @@ class SiteController {
 	}
 
 	public function showAppDep() {
+		$pageTitle = 'Application Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showPhysicalServerDept() {
+		$pageTitle = 'Physical Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+	public function showVirtualServerDept() {
+		$pageTitle = 'Virtual Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDSDept() {
+		$pageTitle = 'Docker Swarm Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showHLBDept() {
+		$pageTitle = 'Hardware Load Balancer Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDatabaseDept() {
+		$pageTitle = 'Database Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showAppDept() {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();

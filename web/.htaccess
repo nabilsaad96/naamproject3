@@ -57,9 +57,19 @@ RewriteRule ^databaserelation/view/?$ app/controller/siteController.php?action=s
 RewriteRule ^applicationrelation/view/?$ app/controller/siteController.php?action=showApp [QSA,L]
 
 # Dependencies
+RewriteRule ^dependency/view/?$ app/controller/siteController.php?action=dependencyOptions [QSA,L]
+RewriteRule ^dependent/view/?$ app/controller/siteController.php?action=dependentOptions [QSA,L]
+
 RewriteRule ^physicalserverrelationdep/view/?$ app/controller/siteController.php?action=showPhysicalServerDep [QSA,L]
 RewriteRule ^virtualserverrelationdep/view/?$ app/controller/siteController.php?action=showVirtualServerDep [QSA,L]
 RewriteRule ^dockerswarmrelationdep/view/?$ app/controller/siteController.php?action=showDSDep [QSA,L]
 RewriteRule ^hardwareloadbalancerrelationdep/view/?$ app/controller/siteController.php?action=showHLBDep [QSA,L]
 RewriteRule ^databaserelationdep/view/?$ app/controller/siteController.php?action=showDatabaseDep [QSA,L]
 RewriteRule ^applicationrelationdep/view/?$ app/controller/siteController.php?action=showAppDep [QSA,L]
+
+RewriteRule ^physicalserverrelationdept/view/?$ app/controller/siteController.php?action=showPhysicalServerDept [QSA,L]
+RewriteRule ^virtualserverrelationdept/view/?$ app/controller/siteController.php?action=showVirtualServerDept [QSA,L]
+RewriteRule ^dockerswarmrelationdept/view/?$ app/controller/siteController.php?action=showDSDept [QSA,L]
+RewriteRule ^hardwareloadbalancerrelationdept/view/?$ app/controller/siteController.php?action=showHLBDept [QSA,L]
+RewriteRule ^databaserelationdept/view/?$ app/controller/siteController.php?action=showDatabaseDept [QSA,L]
+RewriteRule ^applicationrelationdept/view/?$ app/controller/siteController.php?action=showAppDept [QSA,L]
