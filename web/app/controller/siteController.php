@@ -80,6 +80,56 @@ class SiteController {
 				$this->showApp();
 				break;
 
+
+				case 'showPhysicalServerDe':
+					$this->showPhysicalServerDe();
+					break;
+
+				case 'showVirtualServerDe':
+					$this->showVirtualServerDe();
+					break;
+
+				case 'showHLBDe':
+					$this->showHLBDe();
+					break;
+
+				case 'showDatabaseDe':
+					$this->showDatabaseDe();
+					break;
+
+				case 'showDSDe':
+					$this->showDSDe();
+					break;
+
+				case 'showAppDe':
+					$this->showAppDe();
+					break;
+
+				case 'showPhysicalServerDet':
+					$this->showPhysicalServerDet();
+					break;
+
+				case 'showVirtualServerDet':
+					$this->showVirtualServerDet();
+					break;
+
+				case 'showHLBDet':
+					$this->showHLBDet();
+					break;
+
+				case 'showDatabaseDet':
+					$this->showDatabaseDet();
+					break;
+
+				case 'showDSDet':
+					$this->showDSDet();
+					break;
+
+				case 'showAppDet':
+					$this->showAppDet();
+					break;
+
+
 			case 'showPhysicalServerDep':
 				$n = $_GET['name'];
 				$this->showPhysicalServerDep();
@@ -453,6 +503,113 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
+
+	public function showPhysicalServerDe() {
+		$pageTitle = 'Physical Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+	public function showVirtualServerDe() {
+		$pageTitle = 'Virtual Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDSDe() {
+		$pageTitle = 'Docker Swarm Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showHLBDe() {
+		$pageTitle = 'Hardware Load Balancer Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDatabaseDe() {
+		$pageTitle = 'Database Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showAppDe() {
+		$pageTitle = 'Application Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showPhysicalServerDet() {
+		$pageTitle = 'Physical Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+	public function showVirtualServerDet() {
+		$pageTitle = 'Virtual Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDSDet() {
+		$pageTitle = 'Docker Swarm Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showHLBDet() {
+		$pageTitle = 'Hardware Load Balancer Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showDatabaseDet() {
+		$pageTitle = 'Database Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function showAppDet() {
+		$pageTitle = 'Application Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dependent.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
 
 
 	public function login() {
