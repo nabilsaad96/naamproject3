@@ -37,6 +37,10 @@ class HardwareLoadBalancer {
       return $cm;
   }
 
+  public static function loaddep($id) {
+        return null;
+  }
+
   public static function loadAll() {
     // Connect to database
     $db = Db::instance();
@@ -60,9 +64,6 @@ class HardwareLoadBalancer {
     return $physicalservers;
   }
 
-  public static function loaddep($id) {
-        return null;
-  }
 
 
   //Chooses to add or update depending on ID (new id is 0)
