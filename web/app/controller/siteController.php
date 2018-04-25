@@ -528,7 +528,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
 
-		include_once SYSTEM_PATH.'/view/dependencies.tpl';
+		include_once SYSTEM_PATH.'/view/dockerswarmdependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
