@@ -90,12 +90,12 @@ RewriteRule ^applicationrelationdept/([a-zA-Z0-9]+)/view/?$ app/controller/siteC
 
 # make changes
 RewriteRule ^makeChanges/view/?$ app/controller/siteController.php?action=makeChanges [QSA,L]
-RewriteRule ^physical/view/?$ app/controller/siteController.php?action=makePhysical [QSA,L]
-RewriteRule ^virtual/view/?$ app/controller/siteController.php?action=makeVirtual [QSA,L]
-RewriteRule ^database/view/?$ app/controller/siteController.php?action=makeDB [QSA,L]
-RewriteRule ^docker/view/?$ app/controller/siteController.php?action=makeDS [QSA,L]
-RewriteRule ^hardware/view/?$ app/controller/siteController.php?action=makeHLB [QSA,L]
-RewriteRule ^application/view/?$ app/controller/siteController.php?action=makeApp [QSA,L]
+RewriteRule ^makeChanges/physical/view/?$ app/controller/siteController.php?action=makePhysical [QSA,L]
+RewriteRule ^makeChanges/virtual/view/?$ app/controller/siteController.php?action=makeVirtual [QSA,L]
+RewriteRule ^makeChanges/database/view/?$ app/controller/siteController.php?action=makeDB [QSA,L]
+RewriteRule ^makeChanges/docker/view/?$ app/controller/siteController.php?action=makeDS [QSA,L]
+RewriteRule ^makeChanges/hardware/view/?$ app/controller/siteController.php?action=makeHLB [QSA,L]
+RewriteRule ^makeChanges/application/view/?$ app/controller/siteController.php?action=makeApp [QSA,L]
 
 # recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
