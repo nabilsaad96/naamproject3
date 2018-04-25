@@ -340,6 +340,7 @@ class SiteController {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
+		$status = 'p';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -348,6 +349,7 @@ class SiteController {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
+		$status = 'v';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -357,6 +359,7 @@ class SiteController {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
+		$status = 'ds';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -366,6 +369,7 @@ class SiteController {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
+		$status = 'hlb';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -375,6 +379,7 @@ class SiteController {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
+		$status = 'db';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -384,6 +389,7 @@ class SiteController {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
+		$status = 'app';
 
 		include_once SYSTEM_PATH.'/view/dependencies.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -393,6 +399,7 @@ class SiteController {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
+		$status = 'p';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -401,6 +408,7 @@ class SiteController {
 		$pageTitle = 'Virtual Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
+		$status = 'v';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -410,6 +418,7 @@ class SiteController {
 		$pageTitle = 'Docker Swarm Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
+		$status = 'ds';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -419,6 +428,7 @@ class SiteController {
 		$pageTitle = 'Hardware Load Balancer Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
+		$status = 'hlb';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -428,6 +438,7 @@ class SiteController {
 		$pageTitle = 'Database Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
+		$status = 'db';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -437,6 +448,7 @@ class SiteController {
 		$pageTitle = 'Application Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
+		$status = 'app';
 
 		include_once SYSTEM_PATH.'/view/dependent.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
