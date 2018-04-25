@@ -74,6 +74,7 @@ class Application {
       if($result->num_rows == 0) {
         return null;
       }
+    }
 
   public static function loadAll() {
     // Connect to database
