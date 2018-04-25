@@ -137,57 +137,57 @@ class SiteController {
 
 			case 'showVirtualServerDep':
 				$n = $_GET['name'];
-				$this->showVirtualServerDep();
+				$this->showVirtualServerDep($n);
 				break;
 
 			case 'showHLBDep':
 				$n = $_GET['name'];
-				$this->showHLBDep();
+				$this->showHLBDep($n);
 				break;
 
 			case 'showDatabaseDep':
 				$n = $_GET['name'];
-				$this->showDatabaseDep();
+				$this->showDatabaseDep($n);
 				break;
 
 			case 'showDSDep':
 				$n = $_GET['name'];
-				$this->showDSDep();
+				$this->showDSDep($n);
 				break;
 
 			case 'showAppDep':
 				$n = $_GET['name'];
-				$this->showAppDep();
+				$this->showAppDep($n);
 				break;
 
 			case 'showPhysicalServerDept':
 				$n = $_GET['name'];
-				$this->showPhysicalServerDept();
+				$this->showPhysicalServerDept($n);
 				break;
 
 			case 'showVirtualServerDept':
 				$n = $_GET['name'];
-				$this->showVirtualServerDept();
+				$this->showVirtualServerDept($n);
 				break;
 
 			case 'showHLBDept':
 				$n = $_GET['name'];
-				$this->showHLBDept();
+				$this->showHLBDept($n);
 				break;
 
 			case 'showDatabaseDept':
 				$n = $_GET['name'];
-				$this->showDatabaseDept();
+				$this->showDatabaseDept($n);
 				break;
 
 			case 'showDSDept':
 				$n = $_GET['name'];
-				$this->showDSDept();
+				$this->showDSDept($n);
 				break;
 
 			case 'showAppDept':
 				$n = $_GET['name'];
-				$this->showAppDept();
+				$this->showAppDept($n);
 				break;
 
 			case 'dependencyOptions':
