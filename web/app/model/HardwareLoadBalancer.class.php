@@ -47,14 +47,23 @@ SELECT Xname AS name FROM Runs WHERE DSname IN (SELECT DSname AS name FROM Hosts
 UNION
 SELECT DSname AS name FROM Hosts WHERE Aname IN (SELECT Aname AS name FROM Routes WHERE F5name='%s')
 UNION
-SELECT Aname AS name FROM Routes WHERE F5name='%s'
-;", $id, $id, $id, $id);
+SELECT Aname AS name FROM Routes WHERE F5name='%s';", $id, $id, $id, $id);
       // Do the query
       $result = $db->query($q);
       // If nothing found
       if($result->num_rows == 0) {
         return null;
       }
+
+      $physicalservers = array();
+      //Turn the id's into full comments
+      while($row = $result->fetch_assoc()) {
+        $physicalservers[] = $row['name'];
+      }
+      //Return the comments
+      return $physicalservers;
+  }
+
 
   public static function loaddep($id) {
         return null;
