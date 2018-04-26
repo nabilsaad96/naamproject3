@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <tr onclick="window.location='<?= BASE_URL ?>/physical/<?=$r->name?>/view/';">
+              <tr onclick="window.location='<?= BASE_URL ?>/physicalserverrelationdept/<?=$r->name?>/view/';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
@@ -26,9 +26,9 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/applicationrelationdep/<?=$r->name?>" method = "post">
+      <form action="<?= BASE_URL ?>/adhoc/" method = "post">
         <div class="input-group">
-          Enter Administrator Name: <input name="name" type="text">
+          Enter Administrator Name: <input name="adminName" type="text">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
