@@ -678,6 +678,7 @@ class SiteController {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::select($id);
+		echo(count($rl));
 echo($rl[0]->name);
 		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
