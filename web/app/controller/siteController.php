@@ -210,10 +210,10 @@ class SiteController {
 			$this->makePhysical();
 			break;
 
-			/*case 'makePhysicalObj':
+			case 'makePhysicalObj':
 			$n = $_GET['name'];
 			$this->makePhysicalObj($n);
-			break;*/
+			break;
 
 			case 'makeVirtual':
 			$this->makeVirtual();
@@ -662,25 +662,25 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makePhysical.tpl';
+		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	/*public function makePhysicalObj($n) {
+	public function makePhysicalObj($n) {
 		$pageTitle = 'Physical Server Dependencies';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::select($n);
 
-		include_once SYSTEM_PATH.'/view/makePhysical.tpl';
+		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
-	}*/
+	}
 
 	public function makeVirtual() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makeVirtual.tpl';
+		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -689,7 +689,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makeDB.tpl';
+		include_once SYSTEM_PATH.'/view/dbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -698,7 +698,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makeDS.tpl';
+		include_once SYSTEM_PATH.'/view/dsmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -707,7 +707,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makeHLB.tpl';
+		include_once SYSTEM_PATH.'/view/hlbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -716,7 +716,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
 
-		include_once SYSTEM_PATH.'/view/makeApp.tpl';
+		include_once SYSTEM_PATH.'/view/appmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
