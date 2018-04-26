@@ -85,7 +85,7 @@ class Application {
         $r->name             = $row['Aname'];
         echo($r->name);
         echo('    ');
-        echo(array_keys($row));
+        echo(array_keys($row)[0]);
         echo($row[1]);
         echo(count($row));
         //echo($row['Aname']);
