@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <tr onclick="window.location='<?= BASE_URL ?>/physicalserverrelationdept/<?=$r->name?>/view/';">
+              <tr onclick="highlight();">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
@@ -37,3 +37,12 @@
       </form>
     </div>
 </div>
+<script type="text/javascript">
+function highlight()
+{
+  if (tr.checked)
+  {
+    tr.background-color = 'E2E648';
+  }
+}
+</script>
