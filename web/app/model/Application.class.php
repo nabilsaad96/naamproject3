@@ -86,6 +86,7 @@ class Application {
 
         $r->$keys[0]             = $row[$keys[0]];//'Aname'];
         echo($r->$keys[0]);
+        echo(array_keys($r)[0]);
         echo('  ||||  ');
         echo($keys[0]);
         echo($row[1]);
