@@ -80,6 +80,7 @@ class Application {
       $physicalservers = array();
       //Turn the id's into full comments
       while($row = $result->fetch_assoc()) {
+        echo(array_keys($row));
         $r = new \stdClass();
         $r->name             = $row['Aname'];
         echo($r->name);
@@ -90,6 +91,7 @@ class Application {
         $r->backupAdmin      = $row['AbackupAdmin'];
         echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
+        echo(array_keys($r));
       }
       //Return the comments
       return $physicalservers;
