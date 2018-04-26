@@ -82,11 +82,13 @@ class Application {
       while($row = $result->fetch_assoc()) {
         $r->name             = $row['Aname'];
         echo($r->name);
-        echo($row['Aname']);
+        //echo($row['Aname']);
 
         $r->admin            = $row['Aadmin'];
+        echo($r->admin);
         $r->backupAdmin      = $row['AbackupAdmin'];
-        $physicalservers[] = self::loadById($row['Aname']);//$r;//$row['name'];
+        echo($r->backupAdmin);
+        $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
       }
       //Return the comments
       return $physicalservers;
