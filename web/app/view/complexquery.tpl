@@ -14,7 +14,7 @@
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
               <tr>
-                <td><?= $r->name ?></td>
+                <td><?= $r->Aname ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
               </tr>
