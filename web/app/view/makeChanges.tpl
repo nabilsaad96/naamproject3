@@ -14,11 +14,11 @@
   </div>
 
   <div class="col-4" style="upper-margin:75px">
-    <form method="POST" action="<?= BASE_URL ?>/adhoc/" class="form-signin text-center">
+    <form action="<?= BASE_URL ?>/adhoc/" method = "post">
       <div class="input-group">
-        Enter Administrator Name: <input type="text" class="form-control" name="adminName" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        Enter Administrator Name: <input name="adminName" type="text">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" onclick="window.location='<?= BASE_URL ?>';" type="button">Clear</button>
+          <button class="btn btn-outline-secondary" type="reset">Clear</button>
         </div>
       </div>
       <button type="submit" class="text-center" type="button">Submit</button>
