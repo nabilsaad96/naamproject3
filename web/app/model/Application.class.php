@@ -88,7 +88,7 @@ class Application {
         echo($r->admin);
         $r->backupAdmin      = $row['AbackupAdmin'];
         echo($r->backupAdmin);
-        $physicalservers[] = self::loadById($row['Aname']);//$r;//$row['name'];
+        $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
       }
       //Return the comments
       return $physicalservers;
