@@ -303,11 +303,11 @@ class SiteController {
 	public function adhoc($q) {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$r1 = Application::doQuery($q);
+		$rl = Application::doQuery($q);
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';
-		foreach ($r1 as $r) {
+		foreach ($rl as $r) {
 			echo($r->name);
 			echo($r->admin);
 			echo($r->backupAdmin);
