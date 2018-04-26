@@ -671,7 +671,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::select($n);
 
-		include_once SYSTEM_PATH.'/view/makePhysical.tpl';
+		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
