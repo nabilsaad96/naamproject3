@@ -80,11 +80,12 @@ class Application {
       $physicalservers = array();
       //Turn the id's into full comments
       while($row = $result->fetch_assoc()) {
-        echo(array_keys($row));
+        $keys = array_keys($row);
+        //echo(array_keys($row));
         $r = new \stdClass();
-        $r->name             = $row['Aname'];
+        $r->name             = $row[$keys[0]];//'Aname'];
         echo($r->name);
-        echo('    ');
+        echo('  ||||  ');
         echo(array_keys($row)[0]);
         echo($row[1]);
         echo(count($row));
