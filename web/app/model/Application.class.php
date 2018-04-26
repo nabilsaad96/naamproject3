@@ -71,7 +71,6 @@ class Application {
       // Do the query
       $result = $db->query($q);
       echo($q);
-      echo($q);
       echo($result->num_rows);
       // If nothing found
       if($result->num_rows == 0) {
@@ -83,10 +82,12 @@ class Application {
       while($row = $result->fetch_assoc()) {
         $r->name             = $row['Aname'];
         echo($r->name);
-        echo($row['Aname']);
+        //echo($row['Aname']);
 
         $r->admin            = $row['Aadmin'];
+        echo($r->admin);
         $r->backupAdmin      = $row['AbackupAdmin'];
+        echo($r->backupAdmin);
         $physicalservers[] = self::loadById($row['Aname']);//$r;//$row['name'];
       }
       //Return the comments
