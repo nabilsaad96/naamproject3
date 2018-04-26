@@ -80,7 +80,7 @@ class Application {
       $physicalservers = array();
       //Turn the id's into full comments
       while($row = $result->fetch_assoc()) {
-        $r = new \stdClass()
+        $r = new \stdClass();
         $r->name             = $row['Aname'];
         echo($r->name);
         //echo($row['Aname']);
