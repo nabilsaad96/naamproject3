@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/applicationrelationdep/<?=$r->name?>;" method = "post">
+      <form action="<?= BASE_URL ?>/applicationrelationdep/<?=$r->name?>" method = "post">
         <div class="input-group">
           Enter Administrator Name: <input name="name" type="text">
           <div class="input-group-append">
@@ -37,12 +37,3 @@
       </form>
     </div>
 </div>
-<script type="text/javascript">
-function highlight()
-{
-  if (tr.checked)
-  {
-    tr.background-color = 'E2E648';
-  }
-}
-</script>
