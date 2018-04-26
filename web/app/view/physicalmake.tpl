@@ -5,7 +5,7 @@
     <p class="text-center">Select a configuration item to update the administrator of and enter the name of the new administrator.</p>
     <table class="table table-hover table-striped">
       <thead class="thead-dark">
-        <tr onclick="window.location='<?= BASE_URL ?>/physicalserverrelationdept/<?=$r->name?>/view/';">
+        <tr onclick="window.location='<?= BASE_URL ?>/physical/<?=$r->name?>/view/';">
           <th scope="col">Name</th>
           <th scope="col">Admin</th>
           <th scope="col">Backup Admin</th>
