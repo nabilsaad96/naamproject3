@@ -87,8 +87,6 @@ class Application {
         $r->$keys[0]             = $row[$keys[0]];//'Aname'];
         echo($r->$keys[0]);
         echo('  ||||  ');
-        echo(array_keys($r));
-        echo('  ||||  ');
         echo($keys[0]);
         echo($row[1]);
         echo(count($row));
@@ -99,7 +97,10 @@ class Application {
         $r->backupAdmin      = $row['AbackupAdmin'];
         echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
+        echo('  >>  ');
         echo(array_keys($r));
+        echo('  <<  ');
+
       }
       //Return the comments
       return $physicalservers;
