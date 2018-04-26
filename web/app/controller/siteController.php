@@ -272,7 +272,7 @@ class SiteController {
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';
-		echo($r1[0]);
+		echo($r1[0]->name);
 		include_once SYSTEM_PATH.'/view/complexquery.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 
