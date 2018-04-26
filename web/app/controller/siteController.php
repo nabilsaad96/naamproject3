@@ -215,7 +215,7 @@ class SiteController {
 			$this->makePhysicalObj($id);
 			break;
 
-			caidse 'changePhysical':
+			case 'changePhysical':
 			$id = $_GET['name'];
 			$name = $_POST['admin'];
 			$this->changePhysical($id, $name);
