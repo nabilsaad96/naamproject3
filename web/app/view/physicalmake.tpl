@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <tr onclick="highlight();">
+              <tr>
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/physical/view/" method = "post">
+      <form action="<?= BASE_URL ?>/applicationrelationdep/<?=$r->name?>;" method = "post">
         <div class="input-group">
           Enter Administrator Name: <input name="name" type="text">
           <div class="input-group-append">

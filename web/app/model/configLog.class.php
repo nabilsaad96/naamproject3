@@ -60,6 +60,17 @@ class configLog {
     return $physicalservers;
   }
 
+  public static function insertNew($id, $name, $detail) {
+    // Connect to database
+    $db = Db::instance();
+    // Database query
+    $q = sprintf("INSERT INTO '%s' ('configName', 'admin', 'details', 'timestamp') VALUES ('%s', '%s', '%s', CURRENT_TIMESTAMP);",self::DB_TABLE, $id, $name, $detail);
+    // Do the query
+    $result = $db->query($q);
+    //Return result
+    return $result;
+  }
+
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){

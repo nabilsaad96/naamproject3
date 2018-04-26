@@ -667,6 +667,7 @@ class SiteController {
 			$pageTitle = 'Recent Changes';
 			include_once SYSTEM_PATH.'/view/header.tpl';
 			$rl = PhysicalServer::updateAdmin($item, $admin);
+			$rl = configLog::insertNew($item, $admin, "Changed Admin");
 
 			include_once SYSTEM_PATH.'/view/log.tpl';
 			include_once SYSTEM_PATH.'/view/footer.tpl';
