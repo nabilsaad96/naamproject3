@@ -107,7 +107,7 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
     // Connect to database
     $db = Db::instance();
     // Database query
-    $q = sprintf("SELECT %s FROM `%s`;", $id, self::DB_TABLE);
+    $q = sprintf("SELECT * FROM `%s` WHERE Sname = '%s';", self::DB_TABLE, $id);
     // Do the query
     $result = $db->query($q);
     echo($q);
