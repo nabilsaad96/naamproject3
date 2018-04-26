@@ -84,6 +84,10 @@ class Application {
         $r = new \stdClass();
         $r->name             = $row['Aname'];
         echo($r->name);
+        echo('    ');
+        echo(array_keys($row));
+        echo($row[1]);
+        echo(count($row));
         //echo($row['Aname']);
 
         $r->admin            = $row['Aadmin'];
