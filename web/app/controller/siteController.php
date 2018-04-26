@@ -206,6 +206,35 @@ class SiteController {
 				$this->makeChanges();
 				break;
 
+			case 'makePhysical':
+			$this->makePhysical();
+			break;
+
+			case 'makePhysicalObj':
+			$n = $_GET['name'];
+			$this->makePhysicalObj($n);
+			break;
+
+			case 'makeVirtual':
+			$this->makeVirtual();
+			break;
+
+			case 'makeDB':
+			$this->makeDB();
+			break;
+
+			case 'makeDS':
+			$this->makeDS();
+			break;
+
+			case 'makeHLB':
+			$this->makeHLB();
+			break;
+
+			case 'makeApp':
+			$this->makeApp();
+			break;
+
 			case 'adhoc':
 				$query = $_POST['query'];
 				$this->adhoc($query);
@@ -628,7 +657,68 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+	public function makePhysical() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::loadAll();
 
+		include_once SYSTEM_PATH.'/view/makePhysical.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makePhysicalObj($n) {
+		$pageTitle = 'Physical Server Dependencies';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = PhysicalServer::select($n);
+
+		include_once SYSTEM_PATH.'/view/makePhysical.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeVirtual() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/makeVirtual.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeDB() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/makeDB.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeDS() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'/view/makeDS.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeHLB() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/makeHLB.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeApp() {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/makeApp.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
 
 	public function login() {
 		$pageTitle = 'Login';

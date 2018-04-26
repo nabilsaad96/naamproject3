@@ -103,6 +103,29 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
     return $physicalservers;
   }
 
+  public static function select($id) {
+    // Connect to database
+    $db = Db::instance();
+    // Database query
+    $q = sprintf("SELECT %s FROM `%s`;",
+      self::DB_TABLE, $id
+      );
+    // Do the query
+    $result = $db->query($q);
+    // If nothing found
+    if($result->num_rows == 0) {
+      return null;
+    }
+
+    $physicalservers = array();
+    //Turn the id's into full comments
+    while($row = $result->fetch_assoc()) {
+      $physicalservers[] = self::loadById($row['Sname']);
+    }
+    //Return the comments
+    return $physicalservers;
+  }
+
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
