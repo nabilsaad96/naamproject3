@@ -2,7 +2,7 @@
 <div class="row justify-content-md-center">
   <div class="col-6">
     <h2 class="text-center">Update Administrator of Configuration Item</h2>
-    <p class="text-center">Select a configuration item to update the administrator of and enter the name of the new administrator.</p>
+    <p class="text-center">First select a configuration item to update the administrator of and then enter the name of the new administrator.</p>
     <table class="table table-hover table-striped">
       <thead class="thead-dark">
         <tr>
@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <tr onclick="window.location='<?= BASE_URL ?>/physical/<?=$r->name?>/view/';">
+              <tr onclick="window.location='<?= BASE_URL ?>/makeChanges/physical/<?=$r->name?>/view/';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
                 <td><?= $r->backupAdmin ?></td>
@@ -26,9 +26,9 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/adhoc/" method = "post">
+      <form method = "POST" action="<?= BASE_URL ?>/makeChanges/physical/<?=$r->name?>/change/view/">
         <div class="input-group">
-          Enter Administrator Name: <input name="adminName" type="text">
+          Enter Administrator Name: <input name="admin" type="text">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>

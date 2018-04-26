@@ -211,8 +211,14 @@ class SiteController {
 			break;
 
 			case 'makePhysicalObj':
-			$n = $_GET['name'];
-			$this->makePhysicalObj($n);
+			$id = $_GET['name'];
+			$this->makePhysicalObj($id);
+			break;
+
+			caidse 'changePhysical':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changePhysical($id, $name);
 			break;
 
 			case 'makeVirtual':
@@ -666,12 +672,23 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function makePhysicalObj($n) {
-		$pageTitle = 'Physical Server Dependencies';
+	public function makePhysicalObj($id) {
+		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = PhysicalServer::select($n);
+		$rl = PhysicalServer::select($id);
 
 		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changePhysical($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		PhysicalServer::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 

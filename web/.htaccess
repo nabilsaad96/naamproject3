@@ -99,6 +99,7 @@ RewriteRule ^makeChanges/application/view/?$ app/controller/siteController.php?a
 
 RewriteRule ^makeChanges/physical/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makePhysicalObj&name=$1 [QSA,L]
 
+RewriteRule ^makeChanges/physical/([a-zA-Z0-9]+)/change/view/?$ app/controller/siteController.php?action=changePhysical&name=$1 [QSA,L]
 # recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
 
