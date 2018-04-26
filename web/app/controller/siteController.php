@@ -662,35 +662,45 @@ class SiteController {
 	public function makeVirtual() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
+		$rl = VirtualServer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function makeDB() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
+		$rl = Database::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function makeDS() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
+		$rl = DockerSwarm::loadAll();
+
+		include_once SYSTEM_PATH.'/view/dsmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function makeHLB() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
+		$rl = HardwareLoadBalancer::loadAll();
+
+		include_once SYSTEM_PATH.'/view/hlbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
 	public function makeApp() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		include_once SYSTEM_PATH.'/view/makeChanges.tpl';
+		$rl = Application::loadAll();
+
+		include_once SYSTEM_PATH.'/view/appmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
