@@ -269,7 +269,7 @@ class SiteController {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$r1 = Application::doQuery($q);
-		echo($r1);
+		echo("there are this many elements" + count($r1));
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';
