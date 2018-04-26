@@ -26,9 +26,9 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/adhoc/" method = "post">
+      <form action="<?= BASE_URL ?>/physical/view/" method = "post">
         <div class="input-group">
-          Enter Administrator Name: <input name="adminName" type="text">
+          Enter Administrator Name: <input name="name" type="text">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
