@@ -83,10 +83,11 @@ class Application {
         $keys = array_keys($row);
         //echo(array_keys($row));
         $r = new \stdClass();
+
         $r->$keys[0]             = $row[$keys[0]];//'Aname'];
         echo($r->$keys[0]);
         echo('  ||||  ');
-        echo(array_keys($row)[0]);
+        echo($keys[0]);
         echo($row[1]);
         echo(count($row));
         //echo($row['Aname']);
