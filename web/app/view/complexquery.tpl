@@ -25,8 +25,3 @@
 
     </div>
 </div>
-<?php foreach($rl as $r): ?>
-<?= echo($r->name) ?>
-<?= $r->admin ?>
-<?= $r->backupAdmin ?>
-<?php endforeach; ?>
