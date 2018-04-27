@@ -85,6 +85,7 @@ class Application {
         $r = new \stdClass();
         foreach ($keys as $key) {
           $s = $key;
+          echo($s);
           $r->$s = $row[$key];
           // code...
         }
