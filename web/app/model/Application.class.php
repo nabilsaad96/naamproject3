@@ -164,15 +164,6 @@ class Application {
     }
 
     $physicalservers = array();
-<<<<<<< HEAD
-        //Turn the id's into full comments
-        while($row = $result->fetch_assoc()) {
-          $physicalservers[] = self::loadById($row['Sname']);
-        }
-        //Return the comments
-        return $physicalservers;
-      }
-=======
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
       $physicalservers[] = self::loadById($row['Aname']);
@@ -180,7 +171,6 @@ class Application {
     //Return the comments
     return $physicalservers;
   }
->>>>>>> 849540f640870de2124bd81fa1ff15e5d3ae4b82
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
