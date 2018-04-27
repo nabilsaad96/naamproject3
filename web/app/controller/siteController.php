@@ -362,11 +362,6 @@ class SiteController {
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';
-		foreach ($rl as $r) {
-			echo($r->name);
-			echo($r->admin);
-			echo($r->backupAdmin);
-		}
 		include_once SYSTEM_PATH.'/view/complexquery.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 
