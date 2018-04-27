@@ -758,7 +758,7 @@ class SiteController {
 	public function makeVirtualObj($id) {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		$rl = VirutalServer::select($id);
+		$rl = VirtualServer::select($id);
 		echo($rl);
 		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -767,7 +767,7 @@ class SiteController {
 	public function changeVirtual($id, $name) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		VirutalServer::updateAdmin($id, $name);
+		VirtualServer::updateAdmin($id, $name);
 		configLog::insertNew($id, $name, "Updated Admin");
 		$rl = configLog::loadAll();
 
