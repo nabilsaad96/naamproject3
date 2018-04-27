@@ -88,7 +88,7 @@ class Application {
           //echo($s);
           //$r->$s = $row[$key];
           $r[$s] = $row[$key];
-          echo($r[$s]);
+          //echo($r[$s]);
         }
         //$s = $keys[0];
         //$r->$s             = $row[$keys[0]];//'Aname'];
@@ -119,11 +119,7 @@ class Application {
 
 
       }
-      foreach ($physicalservers as $k) {
-        // code...
-        //echo(array_keys($k)[0]);
-      }
-      echo(array_keys($physicalservers[0])[0]);
+      //echo(array_keys($physicalservers[0])[0]);
       //echo()
       //Return the comments
       return $physicalservers;
