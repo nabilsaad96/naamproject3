@@ -5,9 +5,9 @@
     <table class="table table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Admin</th>
-          <th scope="col">Backup Admin</th>
+          <?php foreach($keys as $key): ?>
+            <th scope="col"><?= $key ?></th>
+          <?php endforeach; ?>
         </tr>
       </thead>
         <tbody>
