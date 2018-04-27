@@ -101,8 +101,9 @@ class Application {
         $vars = get_object_vars($r);
         //echo($vars);
         echo(var_dump($vars));
-        echo(array_keys($vars));
         echo('  <<  ');
+        echo(array_keys($vars));
+
 
       }
       //Return the comments
