@@ -108,7 +108,7 @@ class Application {
         $vars = get_object_vars($r);
         //echo($vars);
         echo(var_dump($vars));
-        echo(array_keys($r)[0]);
+        echo(array_keys($r));
         echo('  <<  ');
 
         //echo(array_keys($vars)[0][0]);
