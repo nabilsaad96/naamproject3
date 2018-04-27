@@ -15,7 +15,8 @@
             <?php foreach($rl as $r): ?>
               <tr>
                 <?php foreach($keys as $key): ?>
-                  <td><?= $r->$key ?></td>
+                  <?= $s=$key ?>
+                  <td><?= $r->$s ?></td>
                 <?php endforeach; ?>
               </tr>
             <?php endforeach; ?>
