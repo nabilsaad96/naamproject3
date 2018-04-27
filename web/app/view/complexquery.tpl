@@ -14,9 +14,9 @@
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
               <tr>
-                <td><?= $r->Aname ?></td>
-                <td><?= $r->admin ?></td>
-                <td><?= $r->backupAdmin ?></td>
+                <?php foreach($keys as $key): ?>
+                  <td><?= $r->$key ?></td>
+                <?php endforeach; ?>
               </tr>
             <?php endforeach; ?>
           <?php endif; ?>
