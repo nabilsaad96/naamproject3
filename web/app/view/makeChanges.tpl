@@ -20,6 +20,6 @@
         <button class="btn btn-outline-secondary" type="reset">Clear</button>
       </div>
     </div>
-    <button type="submit" class="text-center" type="button">Submit</button>
+    <button type="submit" class="text-center" type="button" disabled>Submit</button>
   </div>
 </div>
