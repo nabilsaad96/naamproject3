@@ -99,7 +99,7 @@ class Application {
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
         $vars = get_object_vars($r);
-        echo($vars[0]);
+        echo($vars[2]);
         echo('  <<  ');
 
       }
