@@ -83,19 +83,24 @@ class Application {
         $keys = array_keys($row);
         //echo(array_keys($row));
         $r = new \stdClass();
-        $s = $keys[0];
-        $r->$s             = $row[$keys[0]];//'Aname'];
+        foreach ($keys as $key) {
+          $s = $key;
+          $r->$s = $row[$key];
+          // code...
+        }
+        //$s = $keys[0];
+        //$r->$s             = $row[$keys[0]];//'Aname'];
 
-        echo($r->Aname);
+        //echo($r->Aname);
         //echo('  ||||  ');
-        echo($keys[0]);
+        //echo($keys[0]);
         //echo($row[1]);
         //echo(count($row));
         //echo($row['Aname']);
 
-        $r->admin            = $row['Aadmin'];
+        //$r->admin            = $row['Aadmin'];
         //echo($r->admin);
-        $r->backupAdmin      = $row['AbackupAdmin'];
+        //$r->backupAdmin      = $row['AbackupAdmin'];
         //echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
