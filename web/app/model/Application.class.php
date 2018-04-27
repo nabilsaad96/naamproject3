@@ -102,7 +102,7 @@ class Application {
         //echo($vars);
         echo(var_dump($vars));
         echo('  <<  ');
-        echo(array_keys($vars));
+        echo(array_keys($vars)[0]);
 
 
       }
