@@ -98,7 +98,7 @@ class Application {
         echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
-        echo(get_object_vars($r));
+        echo(get_object_vars($r)[0]);
         echo('  <<  ');
 
       }
@@ -162,15 +162,15 @@ class Application {
     if($result->num_rows == 0) {
       return null;
     }
-    
+
     $physicalservers = array();
-    //Turn the id's into full comments
-    while($row = $result->fetch_assoc()) {
-      $physicalservers[] = self::loadById($row['Sname']);
-    }
-    //Return the comments
-    return $physicalservers;
-  }
+        //Turn the id's into full comments
+        while($row = $result->fetch_assoc()) {
+          $physicalservers[] = self::loadById($row['Sname']);
+        }
+        //Return the comments
+        return $physicalservers;
+      }
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
