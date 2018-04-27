@@ -360,6 +360,7 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::doQuery($q);
 		$keys = array_keys[$rl];
+		echo($keys);
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';
