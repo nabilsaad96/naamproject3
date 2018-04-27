@@ -85,9 +85,10 @@ class Application {
         $r = new \stdClass();
 
         $r->$keys[0]             = $row[$keys[0]];//'Aname'];
+
         //echo($r->$keys[0]);
         //echo('  ||||  ');
-        //echo($keys[0]);
+        echo($keys[0]);
         //echo($row[1]);
         //echo(count($row));
         //echo($row['Aname']);
@@ -100,9 +101,9 @@ class Application {
         echo('  >>  ');
         $vars = get_object_vars($r);
         //echo($vars);
-        echo(var_dump($vars));
+        echo(var_dump($vars[0]));
         echo('  <<  ');
-        echo(array_keys($vars)[0][0]);
+        //echo(array_keys($vars)[0][0]);
 
 
       }
