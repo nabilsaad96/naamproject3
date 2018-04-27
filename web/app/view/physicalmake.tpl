@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form method = "POST" action= '/change/view/'>
+      <form method = "POST" action= window.location.href + '/changes/'>
         <div class="input-group">
           Enter Administrator Name: <input name="admin" type="text">
           <div class="input-group-append">
