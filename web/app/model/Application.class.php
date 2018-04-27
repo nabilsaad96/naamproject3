@@ -98,7 +98,7 @@ class Application {
         echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
-        echo(get_object_vars($r)[0]);
+        echo(get_object_vars($r));
         echo('  <<  ');
 
       }
