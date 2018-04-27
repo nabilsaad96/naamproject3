@@ -120,7 +120,7 @@ class Application {
       }
       foreach ($physicalservers as $k) {
         // code...
-        echo(array_keys($k)[0]);
+        //echo(array_keys($k)[0]);
       }
       echo(array_keys($physicalservers[0])[0]);
       //echo()
