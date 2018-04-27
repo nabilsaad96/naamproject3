@@ -101,10 +101,11 @@ RewriteRule ^makeChanges/physical/([a-zA-Z0-9]+)/view/?$ app/controller/siteCont
 RewriteRule ^makeChanges/virtual/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeVirtualObj&name=$1 [QSA,L]
 RewriteRule ^makeChanges/database/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeDBObj&name=$1 [QSA,L]
 RewriteRule ^makeChanges/docker/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeDSObj&name=$1 [QSA,L]
-RewriteRule ^makeChanges/hardware([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeHLBObj&name=$1 [QSA,L]
+RewriteRule ^makeChanges/hardware/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeHLBObj&name=$1 [QSA,L]
 RewriteRule ^makeChanges/application/([a-zA-Z0-9]+)/view/?$ app/controller/siteController.php?action=makeAppObj&name=$1 [QSA,L]
 
 RewriteRule ^makeChanges/physical/([a-zA-Z0-9]+)/change/view/?$ app/controller/siteController.php?action=changePhysical&name=$1 [QSA,L]
+
 # recent changes
 RewriteRule ^showRecentChanges/?$ app/controller/siteController.php?action=showChanges [QSA,L]
 
