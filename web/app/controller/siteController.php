@@ -359,7 +359,7 @@ class SiteController {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::doQuery($q);
-		$keys = array_keys[$rl];
+		$keys = array_keys[$rl[0]];
 		echo($keys);
 		//$rl = Application::loadAll();
 
