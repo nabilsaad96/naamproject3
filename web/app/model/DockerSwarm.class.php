@@ -109,18 +109,18 @@ SELECT Aname AS name FROM Hosts WHERE DSname='%s';", $id, $id);
     // Connect to database
     $db = Db::instance();
     // Database query
-    $q = sprintf("SELECT * FROM `%s` WHERE Sname = '%s';", self::DB_TABLE, $id);
+    $q = sprintf("SELECT * FROM `%s` WHERE DSname = '%s';", self::DB_TABLE, $id);
     // Do the query
     $result = $db->query($q);
     // If nothing found
     if($result->num_rows == 0) {
       return null;
     }
-    
+
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      $physicalservers[] = self::loadById($row['Sname']);
+      $physicalservers[] = self::loadById($row['DSname']);
     }
     //Return the comments
     return $physicalservers;
