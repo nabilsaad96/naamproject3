@@ -85,7 +85,7 @@ class Application {
         $r = new \stdClass();
         foreach ($keys as $key) {
           $s = $key;
-          echo($s);
+          //echo($s);
           $r->$s = $row[$key];
           // code...
         }
@@ -108,7 +108,9 @@ class Application {
         $vars = get_object_vars($r);
         //echo($vars);
         echo(var_dump($vars[0]));
+        echo(array_keys($r)[0]);
         echo('  <<  ');
+
         //echo(array_keys($vars)[0][0]);
 
 
