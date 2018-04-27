@@ -92,18 +92,18 @@ SELECT Xname AS name FROM Contains WHERE PGname='%s';", $id, $id);
     // Connect to database
     $db = Db::instance();
     // Database query
-    $q = sprintf("SELECT * FROM `%s` WHERE Sname = '%s';", self::DB_TABLE, $id);
+    $q = sprintf("SELECT * FROM `%s` WHERE PGname = '%s';", self::DB_TABLE, $id);
     // Do the query
     $result = $db->query($q);
     // If nothing found
     if($result->num_rows == 0) {
       return null;
     }
-    
+
     $physicalservers = array();
     //Turn the id's into full comments
     while($row = $result->fetch_assoc()) {
-      $physicalservers[] = self::loadById($row['Sname']);
+      $physicalservers[] = self::loadById($row['PGname']);
     }
     //Return the comments
     return $physicalservers;
