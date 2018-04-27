@@ -85,17 +85,17 @@ class Application {
         $r = new \stdClass();
 
         $r->$keys[0]             = $row[$keys[0]];//'Aname'];
-        echo($r->$keys[0]);
-        echo('  ||||  ');
-        echo($keys[0]);
-        echo($row[1]);
-        echo(count($row));
+        //echo($r->$keys[0]);
+        //echo('  ||||  ');
+        //echo($keys[0]);
+        //echo($row[1]);
+        //echo(count($row));
         //echo($row['Aname']);
 
         $r->admin            = $row['Aadmin'];
-        echo($r->admin);
+        //echo($r->admin);
         $r->backupAdmin      = $row['AbackupAdmin'];
-        echo($r->backupAdmin);
+        //echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
         $vars = get_object_vars($r);
