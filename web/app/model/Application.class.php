@@ -88,7 +88,7 @@ class Application {
           //echo($s);
           //$r->$s = $row[$key];
           $r[$s] = $row[$key];
-          echo($r($s));
+          echo($r[$s]);
         }
         //$s = $keys[0];
         //$r->$s             = $row[$keys[0]];//'Aname'];
