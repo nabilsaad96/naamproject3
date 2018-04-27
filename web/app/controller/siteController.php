@@ -762,7 +762,7 @@ class SiteController {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirutalServer::select($id);
-
+		echo($rl);
 		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
