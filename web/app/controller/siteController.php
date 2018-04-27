@@ -225,20 +225,75 @@ class SiteController {
 			$this->makeVirtual();
 			break;
 
+			case 'makeVirtualObj':
+			$id = $_GET['name'];
+			$this->makeVirtualObj($id);
+			break;
+
+			case 'changeVirtual':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changeVirtual($id, $name);
+			break;
+
 			case 'makeDB':
 			$this->makeDB();
+			break;
+
+			case 'makeDBObj':
+			$id = $_GET['name'];
+			$this->makeDBObj($id);
+			break;
+
+			case 'changeDB':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changeDB($id, $name);
 			break;
 
 			case 'makeDS':
 			$this->makeDS();
 			break;
 
+			case 'makeDSObj':
+			$id = $_GET['name'];
+			$this->makeDSObj($id);
+			break;
+
+			case 'changeDS':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changeDS($id, $name);
+			break;
+
 			case 'makeHLB':
 			$this->makeHLB();
 			break;
 
+			case 'makeHLBObj':
+			$id = $_GET['name'];
+			$this->makeHLBObj($id);
+			break;
+
+			case 'changeHLB':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changeHLB($id, $name);
+			break;
+
 			case 'makeApp':
 			$this->makeApp();
+			break;
+
+			case 'makeAppObj':
+			$id = $_GET['name'];
+			$this->makeAppObj($id);
+			break;
+
+			case 'changeApp':
+			$id = $_GET['name'];
+			$name = $_POST['admin'];
+			$this->changeApp($id, $name);
 			break;
 
 			case 'adhoc':
@@ -678,8 +733,7 @@ class SiteController {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::select($id);
-		echo(count($rl));
-echo($rl[0]->name);
+
 		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
@@ -704,12 +758,52 @@ echo($rl[0]->name);
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+	public function makeVirtualObj($id) {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = VirutalServer::select($id);
+
+		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changeVirtual($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		VirutalServer::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
 	public function makeDB() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
 
 		include_once SYSTEM_PATH.'/view/dbmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeDBObj($id) {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Database::select($id);
+
+		include_once SYSTEM_PATH.'/view/dbmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changeDB($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		Database::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -722,6 +816,26 @@ echo($rl[0]->name);
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+	public function makeDSObj($id) {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = DockerSwarm::select($id);
+
+		include_once SYSTEM_PATH.'/view/dsmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changeDS($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		DockerSwarm::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
 	public function makeHLB() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
@@ -731,12 +845,52 @@ echo($rl[0]->name);
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
+	public function makeHLBObj($id) {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = HardwareLoadBalancer::select($id);
+
+		include_once SYSTEM_PATH.'/view/hlbmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changeHLB($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		HardwareLoadBalancer::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
 	public function makeApp() {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
 
 		include_once SYSTEM_PATH.'/view/appmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function makeAppObj($id) {
+		$pageTitle = 'Update Configuration Item';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		$rl = Application::select($id);
+
+		include_once SYSTEM_PATH.'/view/appmake.tpl';
+		include_once SYSTEM_PATH.'/view/footer.tpl';
+	}
+
+	public function changeApp($id, $name) {
+		$pageTitle = 'Recent Changes';
+		include_once SYSTEM_PATH.'/view/header.tpl';
+		Application::updateAdmin($id, $name);
+		configLog::insertNew($id, $name, "Updated Admin");
+		$rl = configLog::loadAll();
+
+		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 

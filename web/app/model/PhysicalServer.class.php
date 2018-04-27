@@ -110,8 +110,6 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
     $q = sprintf("SELECT * FROM `%s` WHERE Sname = '%s';", self::DB_TABLE, $id);
     // Do the query
     $result = $db->query($q);
-    echo($q);
-    echo($result->num_rows);
     // If nothing found
     if($result->num_rows == 0) {
       return null;
