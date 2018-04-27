@@ -86,8 +86,8 @@ class Application {
         foreach ($keys as $key) {
           $s = $key;
           //echo($s);
-          $r->$s = $row[$key];
-          // code...
+          //$r->$s = $row[$key];
+          $r[$s] = $row[$key];
         }
         //$s = $keys[0];
         //$r->$s             = $row[$keys[0]];//'Aname'];
@@ -109,6 +109,9 @@ class Application {
         //echo($vars);
         echo(var_dump($vars));
         echo(array_keys($vars));
+        echo(var_dump($r));
+        echo(array_keys($r));
+
         echo('  <<  ');
 
         //echo(array_keys($vars)[0][0]);
