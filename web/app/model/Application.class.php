@@ -118,6 +118,8 @@ class Application {
 
 
       }
+      echo(array_keys($physicalservers));
+      //echo()
       //Return the comments
       return $physicalservers;
 
