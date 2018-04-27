@@ -105,12 +105,12 @@ class Application {
         //echo($r->backupAdmin);
         $physicalservers[] = $r;//self::loadById($row['Aname']);//$r;//$row['name'];
         echo('  >>  ');
-        $vars = get_object_vars($r);
+        //$vars = get_object_vars($r);
         //echo($vars);
-        echo(var_dump($vars));
-        //echo(array_keys($vars));
+        //echo(var_dump($vars));
+        echo(array_keys($vars));
         //echo(var_dump($r));
-        //echo(array_keys($r)[0]);
+        echo(array_keys($r)[0]);
 
         echo('  <<  ');
 
