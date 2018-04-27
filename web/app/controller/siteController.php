@@ -359,6 +359,7 @@ class SiteController {
 		$pageTitle = 'Ad Hoc Query';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::doQuery($q);
+
 		//$rl = Application::loadAll();
 
 		//include_once SYSTEM_PATH.'/view/showall.tpl';

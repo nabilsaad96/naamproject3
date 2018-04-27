@@ -82,7 +82,7 @@ class Application {
       while($row = $result->fetch_assoc()) {
         $keys = array_keys($row);
         //echo(array_keys($row));
-        $r = new \stdClass();
+        $r = array();//new \stdClass();
         foreach ($keys as $key) {
           $s = $key;
           //echo($s);
