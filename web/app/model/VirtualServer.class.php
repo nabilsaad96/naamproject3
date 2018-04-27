@@ -90,9 +90,7 @@ SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
     // Connect to database
     $db = Db::instance();
     // Database query
-    $q = sprintf("SELECT * FROM `%s`;",
-      self::DB_TABLE
-      );
+    $q = sprintf("SELECT * FROM `%s`;", self::DB_TABLE);
     // Do the query
     $result = $db->query($q);
     // If nothing found
@@ -121,6 +119,14 @@ SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
       return null;
     }
 
+    $physicalservers = array();
+    //Turn the id's into full comments
+    while($row = $result->fetch_assoc()) {
+      $physicalservers[] = self::loadById($row['Sname']);
+    }
+    //Return the comments
+    return $physicalservers;
+  }
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){

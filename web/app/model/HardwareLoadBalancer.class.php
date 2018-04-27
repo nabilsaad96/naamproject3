@@ -103,6 +103,15 @@ SELECT Aname AS name FROM Routes WHERE F5name='%s';", $id, $id, $id, $id);
     if($result->num_rows == 0) {
       return null;
     }
+    
+    $physicalservers = array();
+    //Turn the id's into full comments
+    while($row = $result->fetch_assoc()) {
+      $physicalservers[] = self::loadById($row['Sname']);
+    }
+    //Return the comments
+    return $physicalservers;
+  }
 
 
 

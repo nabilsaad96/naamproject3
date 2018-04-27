@@ -99,6 +99,15 @@ SELECT Xname AS name FROM Contains WHERE PGname='%s';", $id, $id);
     if($result->num_rows == 0) {
       return null;
     }
+    
+    $physicalservers = array();
+    //Turn the id's into full comments
+    while($row = $result->fetch_assoc()) {
+      $physicalservers[] = self::loadById($row['Sname']);
+    }
+    //Return the comments
+    return $physicalservers;
+  }
 
 
   //Chooses to add or update depending on ID (new id is 0)
