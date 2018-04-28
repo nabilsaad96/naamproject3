@@ -26,14 +26,14 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form method = "POST" action= window.location.href + '/changes/'>
+      <form method = "POST" action= '/change/view/'>
         <div class="input-group">
           Enter Administrator Name: <input name="admin" type="text">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
         </div>
-        <button type="submit" class="text-center" type="button">Submit</button>
+        <button type="submit" class="text-center" type="button" <?php if(count($rl) > 1): ?> disabled <?php endif; ?>>Submit</button>
       </form>
     </div>
 </div>
