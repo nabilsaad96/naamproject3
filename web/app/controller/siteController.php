@@ -742,7 +742,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = PhysicalServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/physicalmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -771,7 +771,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = VirtualServer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -800,7 +800,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = Database::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/dbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -829,7 +829,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = DockerSwarm::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/dsmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -858,7 +858,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = HardwareLoadBalancer::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/hlbmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
@@ -887,7 +887,7 @@ class SiteController {
 		//configLog::insertNew($name, $admin);
 		$rl = Application::loadAll();
 
-		include_once SYSTEM_PATH.'/view/log.tpl';
+		include_once SYSTEM_PATH.'/view/appmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
