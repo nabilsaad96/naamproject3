@@ -34,7 +34,7 @@
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
-          <input type="hidden" name="name" type="text" placeholder="<?= $s->name ?>" value="<?php $s->name ?>">
+          <input type="hidden" name="name" type="text" placeholder="<?= $s->name ?>" value="<?= $s->name ?>">
         </div>
         <button type="submit" class="text-center" type="button" <?php if(count($rl) > 1): ?> disabled <?php endif; ?>>Submit</button>
       </form>
