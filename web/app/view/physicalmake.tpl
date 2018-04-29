@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <?= $s = $r ?>
+              <?php $s = $r ?>
               <tr onclick="window.location='<?= BASE_URL ?>/makeChanges/physical/<?=$r->name?>/view/';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
