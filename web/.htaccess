@@ -108,7 +108,7 @@ RewriteRule ^makeChanges/physical/([a-zA-Z0-9]+)/view/changes/?$ app/controller/
 RewriteRule ^makeChanges/virtual/([a-zA-Z0-9]+)/view/changes/?$ app/controller/siteController.php?action=changeVirtual&name=$1 [QSA,L]
 RewriteRule ^makeChanges/database/([a-zA-Z0-9]+)/view/changes/?$ app/controller/siteController.php?action=changeDB&name=$1 [QSA,L]
 RewriteRule ^makeChanges/docker/([a-zA-Z0-9]+)/view/changes/?$ app/controller/siteController.php?action=changeDS&name=$1 [QSA,L]
-RewriteRule ^makeChanges/hardware/([a-zA-Z0-9]+)/view/changes/?$ app/controller/siteController.php?action=changeHLB&name=$1 [QSA,L]
+RewriteRule ^makeChanges/hardware/([a-zA-Z0-9_-]+)/view/changes/?$ app/controller/siteController.php?action=changeHLB&name=$1 [QSA,L]
 RewriteRule ^makeChanges/application/([a-zA-Z0-9]+)/view/changes/?$ app/controller/siteController.php?action=changeApp&name=$1 [QSA,L]
 
 # recent changes
