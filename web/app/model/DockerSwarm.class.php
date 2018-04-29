@@ -130,7 +130,7 @@ SELECT Aname AS name FROM Hosts WHERE DSname='%s';", $id, $id);
       $db = Db::instance();
       // Database query
       $q = sprintf("UPDATE `%s` SET DSadmin = '%s' WHERE DSname = '%s';", self::DB_TABLE, $admin, $name);
-      echo($q);
+      //echo($q);
       // Do the query
       $result = $db->query($q);
       //Return result

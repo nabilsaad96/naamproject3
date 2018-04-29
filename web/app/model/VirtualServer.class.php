@@ -132,7 +132,7 @@ SELECT PGname AS name FROM Contains WHERE Xname='%s';", $id, $id, $id, $id);
       $db = Db::instance();
       // Database query
       $q = sprintf("UPDATE `%s` SET Xadmin = '%s' WHERE Xname = '%s';", self::DB_TABLE, $admin, $name);
-      echo($q);
+      //echo($q);
       // Do the query
       $result = $db->query($q);
       //Return result

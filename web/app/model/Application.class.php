@@ -195,7 +195,7 @@ class Application {
       $db = Db::instance();
       // Database query
       $q = sprintf("UPDATE `%s` SET Aadmin = '%s' WHERE Aname = '%s';", self::DB_TABLE, $admin, $name);
-      echo($q);
+      //echo($q);
       // Do the query
       $result = $db->query($q);
       //Return result
