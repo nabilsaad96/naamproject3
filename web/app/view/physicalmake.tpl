@@ -14,7 +14,7 @@
         <tbody>
           <?php if($rl != null): ?>
             <?php foreach($rl as $r): ?>
-              <?php $s = $r ?>
+              <?= $s = $r ?>
               <tr onclick="window.location='<?= BASE_URL ?>/makeChanges/physical/<?=$r->name?>/view/';">
                 <td><?= $r->name ?></td>
                 <td><?= $r->admin ?></td>
@@ -34,7 +34,7 @@
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
-          <input name="name" type="text" placeholder="<?php $s->name ?>kj" value="<?php $s->name ?>">
+          <input name="name" type="text" placeholder="<?= $s->name ?>kj" value="<?php $s->name ?>">
 
         </div>
         <button type="submit" class="text-center" type="button" <?php if(count($rl) > 1): ?> disabled <?php endif; ?>>Submit</button>
