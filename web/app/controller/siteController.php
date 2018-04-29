@@ -450,7 +450,7 @@ class SiteController {
 	}
 
 	public function showPhysicalServer() {
-		$pageTitle = 'Physical Server Relation';
+		$pageTitle = 'Physical Servers';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = PhysicalServer::loadAll();
 
@@ -459,7 +459,7 @@ class SiteController {
 	}
 
 	public function showVirtualServer() {
-		$pageTitle = 'Virtual Server Relation';
+		$pageTitle = 'Virtual Servers';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::loadAll();
 
@@ -468,7 +468,7 @@ class SiteController {
 	}
 
 	public function showDS() {
-		$pageTitle = 'Docker Swarm Relation';
+		$pageTitle = 'Docker Swarms';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = DockerSwarm::loadAll();
 
@@ -477,7 +477,7 @@ class SiteController {
 	}
 
 	public function showHLB() {
-		$pageTitle = 'Hardware Load Balancer Relation';
+		$pageTitle = 'Hardware Load Balancers';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = HardwareLoadBalancer::loadAll();
 
@@ -486,7 +486,7 @@ class SiteController {
 	}
 
 	public function showDatabase() {
-		$pageTitle = 'Database Relation';
+		$pageTitle = 'Databases';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Database::loadAll();
 
@@ -495,7 +495,7 @@ class SiteController {
 	}
 
 	public function showApp() {
-		$pageTitle = 'Application Relation';
+		$pageTitle = 'Applications';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = Application::loadAll();
 
