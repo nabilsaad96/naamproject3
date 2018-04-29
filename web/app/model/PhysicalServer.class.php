@@ -160,11 +160,11 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
       return $result;
   }
 
-  public static function updateAdmin($id, $name) {
+  public static function updateAdmin($name, $admin) {
       $db = Db::instance();
       // Database query
-      $q = sprintf("UPDATE '%s' SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $name, $id);
-      //echo($q);
+      $q = sprintf("UPDATE '%s' SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $admin, $name);
+      echo($q);
       // Do the query
       $result = $db->query($q);
       //Return result

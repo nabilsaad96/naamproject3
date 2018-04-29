@@ -216,9 +216,9 @@ class SiteController {
 			break;
 
 			case 'changePhysical':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changePhysical($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changePhysical($name, $admin);
 			break;
 
 			case 'makeVirtual':
@@ -735,11 +735,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changePhysical($id, $name) {
+	public function changePhysical($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		PhysicalServer::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		PhysicalServer::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
