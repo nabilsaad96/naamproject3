@@ -194,7 +194,7 @@ class Application {
   public static function updateAdmin($name, $admin) {
       $db = Db::instance();
       // Database query
-      $q = sprintf("UPDATE `%s` SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $admin, $name);
+      $q = sprintf("UPDATE `%s` SET admin = '%s' WHERE Aname = '%s';", self::DB_TABLE, $admin, $name);
       echo($q);
       // Do the query
       $result = $db->query($q);
