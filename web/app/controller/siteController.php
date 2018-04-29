@@ -739,8 +739,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		PhysicalServer::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = PhysicalServer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -768,8 +768,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		VirtualServer::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = VirtualServer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -797,8 +797,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		Database::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = Database::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -826,8 +826,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		DockerSwarm::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = DockerSwarm::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -855,8 +855,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		HardwareLoadBalancer::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = HardwareLoadBalancer::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
@@ -884,8 +884,8 @@ class SiteController {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		Application::updateAdmin($name, $admin);
-		configLog::insertNew($name, $admin);
-		$rl = configLog::loadAll();
+		//configLog::insertNew($name, $admin);
+		$rl = Application::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
