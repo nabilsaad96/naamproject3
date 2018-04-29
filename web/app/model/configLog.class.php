@@ -67,7 +67,7 @@ class configLog {
     $q = sprintf("INSERT INTO `%s` VALUES ('%s', '%s', '%s', CURRENT_TIMESTAMP);",self::DB_TABLE, $id, $name, $detail);
     // Do the query
     $result = $db->query($q);
-    //Return result
+    //Return result 
     return $result;
   }
 
