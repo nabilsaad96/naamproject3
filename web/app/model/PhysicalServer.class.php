@@ -124,6 +124,16 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
     return $physicalservers;
   }
 
+  public static function updateAdmin($name, $admin) {
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("UPDATE `%s` SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $admin, $name);
+      echo($q);
+      // Do the query
+      $result = $db->query($q);
+      //Return result
+      return $result;
+  }
 
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
@@ -157,17 +167,6 @@ SELECT Xname FROM Virtualizes WHERE Sname='%s';", $id,$id,$id,$id,$id);
       // build query
       $q = sprintf("DELETE FROM `%s` WHERE id = %d;", self::DB_TABLE, $idCM);
       $result = $db->query($q); // execute query
-      return $result;
-  }
-
-  public static function updateAdmin($name, $admin) {
-      $db = Db::instance();
-      // Database query
-      $q = sprintf("UPDATE `%s` SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $admin, $name);
-      echo($q);
-      // Do the query
-      $result = $db->query($q);
-      //Return result
       return $result;
   }
 }

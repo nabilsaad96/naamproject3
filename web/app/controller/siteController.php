@@ -293,7 +293,7 @@ class SiteController {
 			case 'changeApp':
 			$name = $_POST['name'];
 			$admin = $_POST['admin'];
-			$this->changeApp($name, $admin); //id, name
+			$this->changeApp($name, $admin);
 			break;
 
 			case 'adhoc':
@@ -759,7 +759,7 @@ class SiteController {
 		$pageTitle = 'Update Configuration Item';
 		include_once SYSTEM_PATH.'/view/header.tpl';
 		$rl = VirtualServer::select($id);
-		echo($rl);
+
 		include_once SYSTEM_PATH.'/view/virtualmake.tpl';
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}

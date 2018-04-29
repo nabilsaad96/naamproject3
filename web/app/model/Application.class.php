@@ -191,6 +191,17 @@ class Application {
     return $physicalservers;
   }
 
+  public static function updateAdmin($name, $admin) {
+      $db = Db::instance();
+      // Database query
+      $q = sprintf("UPDATE `%s` SET admin = '%s' WHERE Sname = '%s';", self::DB_TABLE, $admin, $name);
+      echo($q);
+      // Do the query
+      $result = $db->query($q);
+      //Return result
+      return $result;
+  }
+
   //Chooses to add or update depending on ID (new id is 0)
   public function save(){
     if($this->id == 0) {
