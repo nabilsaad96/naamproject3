@@ -231,9 +231,9 @@ class SiteController {
 			break;
 
 			case 'changeVirtual':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changeVirtual($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changeVirtual($name, $admin);
 			break;
 
 			case 'makeDB':
@@ -246,9 +246,9 @@ class SiteController {
 			break;
 
 			case 'changeDB':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changeDB($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changeDB($name, $admin);
 			break;
 
 			case 'makeDS':
@@ -261,9 +261,9 @@ class SiteController {
 			break;
 
 			case 'changeDS':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changeDS($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changeDS($name, $admin);
 			break;
 
 			case 'makeHLB':
@@ -276,9 +276,9 @@ class SiteController {
 			break;
 
 			case 'changeHLB':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changeHLB($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changeHLB($name, $admin);
 			break;
 
 			case 'makeApp':
@@ -291,9 +291,9 @@ class SiteController {
 			break;
 
 			case 'changeApp':
-			$id = $_GET['name'];
-			$name = $_POST['admin'];
-			$this->changeApp($id, $name);
+			$name = $_POST['name'];
+			$admin = $_POST['admin'];
+			$this->changeApp($name, $admin); //id, name
 			break;
 
 			case 'adhoc':
@@ -764,11 +764,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changeVirtual($id, $name) {
+	public function changeVirtual($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		VirtualServer::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		VirtualServer::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
@@ -793,11 +793,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changeDB($id, $name) {
+	public function changeDB($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		Database::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		Database::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
@@ -822,11 +822,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changeDS($id, $name) {
+	public function changeDS($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		DockerSwarm::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		DockerSwarm::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
@@ -851,11 +851,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changeHLB($id, $name) {
+	public function changeHLB($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		HardwareLoadBalancer::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		HardwareLoadBalancer::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
@@ -880,11 +880,11 @@ class SiteController {
 		include_once SYSTEM_PATH.'/view/footer.tpl';
 	}
 
-	public function changeApp($id, $name) {
+	public function changeApp($name, $admin) {
 		$pageTitle = 'Recent Changes';
 		include_once SYSTEM_PATH.'/view/header.tpl';
-		Application::updateAdmin($id, $name);
-		configLog::insertNew($id, $name, "Updated Admin");
+		Application::updateAdmin($name, $admin);
+		configLog::insertNew($name, $admin, "Updated Admin");
 		$rl = configLog::loadAll();
 
 		include_once SYSTEM_PATH.'/view/log.tpl';
