@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form action="<?= BASE_URL ?>/adhoc/" method = "post">
+      <form method = "POST" action= '<?= BASE_URL ?>/makeChanges/virtual/<?= $s->name ?>/view/changes/'>
         <div class="input-group">
           <!--Enter Administrator Name: <input name="admin" type="text" placeholder="Enter Admin Name"> -->
           <input name="admin" type="text" placeholder="Enter Admin Name">
