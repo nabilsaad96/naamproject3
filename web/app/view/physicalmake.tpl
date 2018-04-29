@@ -27,7 +27,7 @@
     </div>
 
     <div class="col-4" style="upper-margin:75px">
-      <form method = "POST" action= '/change/view/'>
+      <form method = "POST" action= '<?= BASE_URL ?>/makeChanges/physical/<?= $s->name ?>/view/changes/'>
         <div class="input-group">
           <!--Enter Administrator Name: <input name="admin" type="text" placeholder="Enter Admin Name"> -->
           <input name="admin" type="text" placeholder="Enter Admin Name">
