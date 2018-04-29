@@ -28,10 +28,13 @@
     <div class="col-4" style="upper-margin:75px">
       <form action="<?= BASE_URL ?>/adhoc/" method = "post">
         <div class="input-group">
-          Enter Administrator Name: <input name="adminName" type="text">
+          <!--Enter Administrator Name: <input name="admin" type="text" placeholder="Enter Admin Name"> -->
+          <input name="admin" type="text" placeholder="Enter Admin Name">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="reset">Clear</button>
           </div>
+          <input type="hidden" name="name" type="text" placeholder="<?= $s->name ?>" value="<?php $s->name ?>">
+
         </div>
         <button type="submit" class="text-center" type="button">Submit</button>
       </form>
